@@ -1,4 +1,8 @@
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, FreeMode  } from 'swiper';
 import 'swiper/css';
@@ -6,11 +10,18 @@ import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
+import CategoryCard from '../components/CategoryCard';
+import ArticlePreview from '../components/ArticlePreview';
+
+import { BiChevronRight } from "react-icons/bi";
+import ProductCard from '../components/ProductCard';
+
+
 function Home() {
     return (
-        <main className='py-5'>
+        <main>
             <Container>
-                <div className='position-relative mb-5'>
+                <section className='position-relative mb-8'>
                     <Swiper
                         className='main-slider'
                         modules={[Navigation, Pagination, FreeMode]}
@@ -53,8 +64,312 @@ function Home() {
                             </figure>
                         </SwiperSlide>
                     </Swiper>
-                </div>
+                </section>
+
+                <section className='mb-8'>
+                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                        <h2 className='mb-0'>Популярные категории</h2>
+                        <Link to="/" className='fw-6'>
+                            <span>Смотреть все</span>
+                            <BiChevronRight className='fs-12'/>
+                        </Link>
+                    </div>
+
+                    <aside className='horizontal mb-5'></aside>
+
+                    <Row md={4} className='gy-5 gx-3'>
+                        <Col>
+                            <CategoryCard title={'Наборы'} imgUrl={'imgs/categories/cat1.jpg'} />
+                        </Col>
+                        <Col>
+                            <CategoryCard title={'Воздушные шары'} imgUrl={'imgs/categories/cat2.jpg'} />
+                        </Col>
+                        <Col>
+                            <CategoryCard title={'Подарки на 23 февраля'} imgUrl={'imgs/categories/cat3.jpg'} />
+                        </Col>
+                        <Col>
+                            <CategoryCard title={'Подарки на 8 марта'} imgUrl={'imgs/categories/cat3.jpg'} />
+                        </Col>
+                        <Col>
+                            <CategoryCard title={'Наборы'} imgUrl={'imgs/categories/cat1.jpg'} />
+                        </Col>
+                        <Col>
+                            <CategoryCard title={'Воздушные шары'} imgUrl={'imgs/categories/cat2.jpg'} />
+                        </Col>
+                        <Col>
+                            <CategoryCard title={'Подарки на 23 февраля'} imgUrl={'imgs/categories/cat3.jpg'} />
+                        </Col>
+                        <Col>
+                            <CategoryCard title={'Подарки на 8 марта'} imgUrl={'imgs/categories/cat3.jpg'} />
+                        </Col>
+                    </Row>
+                </section>
             </Container>
+
+            <section className='offers mb-8'>
+                <Container>
+                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                        <h2 className='mb-0'>Лучшие предложения</h2>
+                        <Link to="/" className='fw-6'>
+                            <span>Смотреть все</span>
+                            <BiChevronRight className='fs-12'/>
+                        </Link>
+                    </div>
+                    <div className='position-relative'>
+                        <Swiper
+                            className='position-static py-5 mt-5'
+                            modules={[Navigation]}
+                            spaceBetween={25}
+                            slidesPerView={5}
+                            navigation
+                        >
+                            <SwiperSlide>
+                                <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src='imgs/offers/offer2.jpg' alt='offer2' className='offer'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src='imgs/offers/offer3.jpg' alt='offer3' className='offer'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src='imgs/offers/offer4.jpg' alt='offer4' className='offer'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src='imgs/offers/offer2.jpg' alt='offer2' className='offer'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src='imgs/offers/offer3.jpg' alt='offer3' className='offer'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src='imgs/offers/offer4.jpg' alt='offer4' className='offer'/>
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+                </Container>
+            </section>
+
+            <Container>
+                <section className='mb-8'>
+                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                        <h2 className='mb-0'>Наборы</h2>
+                        <Link to="/" className='fw-6'>
+                            <span>Смотреть все</span>
+                            <BiChevronRight className='fs-12'/>
+                        </Link>
+                    </div>
+
+                    <Row>
+                        <Col md={4}>
+                            <aside className='vertical'></aside>
+                        </Col>
+                        <Col md={8}>
+                            <Row md={4} className='gx-3 gy-4'>
+                                <Col>
+                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                </Col>
+                                <Col>
+                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                </Col>
+                                <Col>
+                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                </Col>
+                                <Col>
+                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                </Col>
+                                <Col>
+                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                </Col>
+                                <Col>
+                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                </Col>
+                                <Col>
+                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                </Col>
+                                <Col>
+                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                </Col>
+                            </Row> 
+                        </Col>
+                    </Row>
+                </section>
+
+                <section className='mb-8'>
+                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                        <h2 className='mb-0'>Хиты продаж</h2>
+                        <Link to="/" className='fw-6'>
+                            <span>Смотреть все</span>
+                            <BiChevronRight className='fs-12'/>
+                        </Link>
+                    </div>
+
+                    <div className='position-relative'>
+                        <Swiper
+                            className='position-static py-3'
+                            modules={[Navigation]}
+                            spaceBetween={16}
+                            slidesPerView={6}
+                            navigation={true}
+                        >
+                            <SwiperSlide>
+                                <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+                </section>
+            </Container>
+
+            <section className='help mb-8'>
+                <Container>
+                    <Row>
+                        <Col md={6}>
+                            <h2>Не знаете что подарить? Мы поможем!</h2>
+                            <p className='fs-12 fw-6'>Если вы до сих пор не знаете, что подарить, то Вам очень повезло. Мы всё уже нашли и придумали за Вас.</p>
+                            <p className='fs-12 fw-6'>А Вам осталось только ответить на несколько вопросов.</p>
+                            <button type='button' className='btn-1 mt-4'>Найти подарок</button>
+                        </Col>
+                    </Row>
+                </Container>
+                <img className='bg' src='imgs/bg/gift-box.png' alt='Подбор подарка'/>
+            </section>
+
+            <Container>
+                <section className='mb-8'>
+                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                        <h2 className='mb-0'>Новости</h2>
+                        <Link to="/" className='fw-6'>
+                            <span>Смотреть все</span>
+                            <BiChevronRight className='fs-12'/>
+                        </Link>
+                    </div>
+                    <div className='position-relative'>
+                        <Swiper
+                            className='position-static py-5 mt-5'
+                            modules={[Navigation]}
+                            spaceBetween={25}
+                            slidesPerView={5}
+                            navigation
+                        >
+                            <SwiperSlide>
+                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+                </section>
+            </Container>
+
+            <section className='balloons'>
+                <img src='imgs/bg/bg-balloons.png' className='bg'/>
+                <Container>
+                    <Row>
+                        <Col md={6}>
+                            <h2>Хотите сделать праздник<br/>по-настоящему ярким?</h2>
+                            <p className='fs-12 fw-3'>Скорее заказывайте воздушные шары, они обязательно понравятся как взрослым, так и малышам. Доставим в любую точку Казани!</p>
+                            <form className='mt-4'>
+                                <Row className='g-3'>
+                                    <Col md={4}>
+                                        <label className='mb-2'>Телефон</label>
+                                        <input type='tel' placeholder='+7 (965) 345-67-89'/>
+                                    </Col>
+                                    <Col md={4}>
+                                        <label className='mb-2'>Имя</label>
+                                        <input type='text' placeholder='Ваше имя'/>
+                                    </Col>
+                                    <Col md={4}>
+                                        <label className='mb-2'>Дата</label>
+                                        <input type='date'/>
+                                    </Col>
+                                    <Col xs={12}>
+                                        <label className='mb-2'>Комментарий к заказу</label>
+                                        <textarea placeholder='Ваше имя'></textarea>
+                                    </Col>
+                                    <Col xs={12} className='d-flex align-items-center'>
+                                        <button type='submit' className='btn-1'>Оформить заказ</button>
+                                        <div className='flex-1 fs-08 fw-3 ms-3'>Нажимая на кнопку «Оформить заказ», вы соглашаетесь с <a href='/' className='main-color text-decoration-underline'>политикой конфидециальности</a></div>
+                                    </Col>
+                                </Row>
+                            </form>
+
+                            <div className='position-relative mt-5'>
+                                <Swiper
+                                    className='position-static py-3'
+                                    modules={[Navigation]}
+                                    spaceBetween={16}
+                                    slidesPerView={3}
+                                    navigation={true}
+                                >
+                                    <SwiperSlide>
+                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product2.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product2.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product2.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
+                                    </SwiperSlide>
+                                </Swiper>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
         </main>
     );
 }

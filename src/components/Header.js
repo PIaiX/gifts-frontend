@@ -1,24 +1,26 @@
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
 import { FiSearch, FiMenu, FiUser, FiHeart, FiShoppingCart } from "react-icons/fi";
+import { IoLocationSharp } from "react-icons/io5";
 
 function Header(props) {
     return (
         <header>
             <div className='top'>
                 <Container className='d-flex align-items-center justify-content-between h-100'>
-                    <div className='d-flex'>
+                    <div className='d-flex align-items-center'>
                         <div>
-                            <span>Ваш город:</span>
-                            <span className='fw-6'>Казань</span>
+                            <span className='fw-3'>Ваш город:</span>
+                            <span className='ms-1'>Казань</span>
                         </div>
-                        <div>
+                        <div className='d-flex align-items-baseline ms-4'>
+                            <IoLocationSharp className='main-color'/>
                             <span className='fw-6'>Рашида Вагапова 3</span>
                         </div>
                     </div>
                     <div className='d-flex'>
-                        <button type='button' className='main-color me-3'>Заказать звонок</button>
-                        <a href='tel:+79653456789'>+7 (965) 345-67-89</a>
+                        <button type='button' className='main-color text-decoration-underline me-3'>Заказать звонок</button>
+                        <a href='tel:+79653456789' className='fw-6'>+7 (965) 345-67-89</a>
                     </div>
                 </Container>
             </div>
