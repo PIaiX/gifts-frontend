@@ -10,6 +10,10 @@ export const routeList = [
       element: <Layout/>,
       children: [
         {index: true, element: <Home /> , breadcrumb: 'Главная'},
+        {path: 'catalog', element: <Home/>, breadcrumb: 'Каталог'},
+        {path: 'balloons', element: <Home/>, breadcrumb: 'Шары'},
+        {path: 'cart', element: <Home/>, breadcrumb: 'Корзина'},
+        {path: 'account', element: <Home/>, breadcrumb: 'Личный аккаунт'},
       ],
     },
   ];
@@ -24,8 +28,8 @@ export default function AppRouter() {
     const element = useRoutes(routeList)
   
     return (
-        <Wrapper>
-            {element}
-        </Wrapper>
+      <Wrapper>
+        {element}
+      </Wrapper>
     );
 }

@@ -25,11 +25,25 @@ function Home() {
                     <Swiper
                         className='main-slider'
                         modules={[Navigation, Pagination, FreeMode]}
-                        spaceBetween={50}
-                        slidesPerView={'auto'}
+                        spaceBetween={20}
+                        slidesPerView={1}
                         navigation
                         freeMode={true}
                         pagination={{ clickable: true }}
+                        breakpoints={{
+                            576: {
+                                spaceBetween: 15,
+                                slidesPerView: 'auto'
+                            },
+                            768: {
+                                spaceBetween: 30,
+                                slidesPerView: 'auto'
+                            },
+                            1400: {
+                                spaceBetween: 50,
+                                slidesPerView: 'auto'
+                            },
+                        }}
                         >
                         <SwiperSlide>
                             <figure>
@@ -67,7 +81,7 @@ function Home() {
                 </section>
 
                 <section className='mb-8'>
-                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Популярные категории</h2>
                         <Link to="/" className='fw-6'>
                             <span>Смотреть все</span>
@@ -75,9 +89,9 @@ function Home() {
                         </Link>
                     </div>
 
-                    <aside className='horizontal mb-5'></aside>
+                    <aside className='d-none d-lg-block horizontal mb-5'></aside>
 
-                    <Row md={4} className='gy-5 gx-3'>
+                    <Row xs={2} md={3} lg={4} className='gy-4 gy-lg-5 gx-2 gx-sm-3'>
                         <Col>
                             <CategoryCard title={'Наборы'} imgUrl={'imgs/categories/cat1.jpg'} />
                         </Col>
@@ -108,7 +122,7 @@ function Home() {
 
             <section className='offers mb-8'>
                 <Container>
-                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Лучшие предложения</h2>
                         <Link to="/" className='fw-6'>
                             <span>Смотреть все</span>
@@ -117,11 +131,29 @@ function Home() {
                     </div>
                     <div className='position-relative'>
                         <Swiper
-                            className='position-static py-5 mt-5'
+                            className='position-static py-xxl-5 mt-lg-5'
                             modules={[Navigation]}
-                            spaceBetween={25}
-                            slidesPerView={5}
+                            spaceBetween={10}
+                            slidesPerView={2}
                             navigation
+                            breakpoints={{
+                                576: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 16,
+                                },
+                                992: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 16,
+                                },
+                                1200: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 25,
+                                },
+                                1660: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 25,
+                                },
+                            }}
                         >
                             <SwiperSlide>
                                 <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
@@ -154,7 +186,7 @@ function Home() {
 
             <Container>
                 <section className='mb-8'>
-                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Наборы</h2>
                         <Link to="/" className='fw-6'>
                             <span>Смотреть все</span>
@@ -163,11 +195,11 @@ function Home() {
                     </div>
 
                     <Row>
-                        <Col md={4}>
-                            <aside className='vertical'></aside>
+                        <Col lg={5} xxl={4}>
+                            <aside className='vertical mb-4 mb-lg-0'></aside>
                         </Col>
-                        <Col md={8}>
-                            <Row md={4} className='gx-3 gy-4'>
+                        <Col lg={7} xxl={8}>
+                            <Row xs={2} md={3} xxl={4} className='gx-2 gx-sm-3 gy-4'>
                                 <Col>
                                     <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
                                 </Col>
@@ -186,10 +218,10 @@ function Home() {
                                 <Col>
                                     <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
                                 </Col>
-                                <Col>
+                                <Col className='d-none d-xxl-block'>
                                     <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
                                 </Col>
-                                <Col>
+                                <Col className='d-none d-xxl-block'>
                                     <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
                                 </Col>
                             </Row> 
@@ -197,8 +229,8 @@ function Home() {
                     </Row>
                 </section>
 
-                <section className='mb-8'>
-                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                <section className='d-none d-md-block mb-8'>
+                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Хиты продаж</h2>
                         <Link to="/" className='fw-6'>
                             <span>Смотреть все</span>
@@ -210,9 +242,23 @@ function Home() {
                         <Swiper
                             className='position-static py-3'
                             modules={[Navigation]}
-                            spaceBetween={16}
-                            slidesPerView={6}
+                            spaceBetween={10}
+                            slidesPerView={2}
                             navigation={true}
+                            breakpoints={{
+                                768: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 16,
+                                },
+                                992: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 16,
+                                },
+                                1400: {
+                                    slidesPerView: 6,
+                                    spaceBetween: 16,
+                                },
+                            }}
                         >
                             <SwiperSlide>
                                 <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
@@ -246,10 +292,10 @@ function Home() {
             <section className='help mb-8'>
                 <Container>
                     <Row>
-                        <Col md={6}>
+                        <Col xs={8} lg={6}>
                             <h2>Не знаете что подарить? Мы поможем!</h2>
-                            <p className='fs-12 fw-6'>Если вы до сих пор не знаете, что подарить, то Вам очень повезло. Мы всё уже нашли и придумали за Вас.</p>
-                            <p className='fs-12 fw-6'>А Вам осталось только ответить на несколько вопросов.</p>
+                            <p className='d-none d-md-block fs-12 fw-6'>Если вы до сих пор не знаете, что подарить, то Вам очень повезло. Мы всё уже нашли и придумали за Вас.</p>
+                            <p className='d-none d-md-block fs-12 fw-6'>А Вам осталось только ответить на несколько вопросов.</p>
                             <button type='button' className='btn-1 mt-4'>Найти подарок</button>
                         </Col>
                     </Row>
@@ -259,7 +305,7 @@ function Home() {
 
             <Container>
                 <section className='mb-8'>
-                    <div className='d-flex justify-content-between align-items-center mb-5'>
+                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Новости</h2>
                         <Link to="/" className='fw-6'>
                             <span>Смотреть все</span>
@@ -268,11 +314,34 @@ function Home() {
                     </div>
                     <div className='position-relative'>
                         <Swiper
-                            className='position-static py-5 mt-5'
-                            modules={[Navigation]}
-                            spaceBetween={25}
-                            slidesPerView={5}
+                            className='swiper-articles position-static py-xxl-5 mt-lg-5'
+                            modules={[Navigation, FreeMode]}
+                            spaceBetween={16}
+                            slidesPerView={'auto'}
+                            freeMode={true}
                             navigation
+                            breakpoints={{
+                                576: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 16
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 16,
+                                },
+                                992: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 16,
+                                },
+                                1200: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 25,
+                                },
+                                1660: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 25,
+                                },
+                            }}
                         >
                             <SwiperSlide>
                                 <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
@@ -300,14 +369,14 @@ function Home() {
                 </section>
             </Container>
 
-            <section className='balloons'>
+            <section className='d-none d-md-block balloons'>
                 <img src='imgs/bg/bg-balloons.png' className='bg'/>
                 <Container>
                     <Row>
-                        <Col md={6}>
+                        <Col xs={12} lg={7} xxl={6}>
                             <h2>Хотите сделать праздник<br/>по-настоящему ярким?</h2>
                             <p className='fs-12 fw-3'>Скорее заказывайте воздушные шары, они обязательно понравятся как взрослым, так и малышам. Доставим в любую точку Казани!</p>
-                            <form className='mt-4'>
+                            <form className='mt-4 mb-5'>
                                 <Row className='g-3'>
                                     <Col md={4}>
                                         <label className='mb-2'>Телефон</label>
@@ -332,7 +401,7 @@ function Home() {
                                 </Row>
                             </form>
 
-                            <div className='position-relative mt-5'>
+                            <div className='d-none d-xl-block position-relative'>
                                 <Swiper
                                     className='position-static py-3'
                                     modules={[Navigation]}
