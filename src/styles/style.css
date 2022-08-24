@@ -295,6 +295,37 @@ h6 {
     max-width: 1600px;
   }
 }
+.breadcrumbs {
+  margin-bottom: 3em;
+}
+.breadcrumbs ul {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: rgba(24, 24, 24, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.breadcrumbs ul li:not(:first-child) {
+  margin-left: 0.5em;
+}
+.breadcrumbs ul li:not(:first-child)::before {
+  content: "/";
+  margin-right: 0.5em;
+}
+.breadcrumbs ul li a {
+  transition: 0.3s;
+}
+.breadcrumbs ul li a:hover, .breadcrumbs ul li a:focus {
+  color: #181818;
+}
+.breadcrumbs ul li a.active {
+  pointer-events: none;
+}
+
 .swiper-button-next, .swiper-button-prev {
   width: 4em;
   height: 4em;
