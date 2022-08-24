@@ -67,7 +67,7 @@ function Header(props) {
                                     </button>
                                 </li>
                                 <li className='d-block d-lg-none'>
-                                    <button type='button' onClick={handleClose}>
+                                    <button type='button' onClick={handleShow}>
                                         <FiMenu className='fs-20'/>
                                     </button>
                                 </li>
@@ -94,7 +94,7 @@ function Header(props) {
         </header>
         <Offcanvas show={show} onHide={handleClose}>
             <Offcanvas.Body>
-                <button type='button' className='close'><FiX/></button>
+                <button type='button' className='close' onClick={handleClose}><FiX/></button>
                 <h4>Меню</h4>
                 <div className='mb-3'>
                     <span className='fw-3'>Ваш город:</span>
