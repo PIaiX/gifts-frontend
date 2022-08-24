@@ -9,6 +9,8 @@ $gradient: linear-gradient(90deg, #E1313B -64.68%, #FF4E58 182.57%);
 $transition: .3s;
 $radius: 2.5em;
 
+// "homepage": "https://ngf93.github.io/gifts-react",
+
 /* mixins */
 @mixin flex-center {
     display: flex;
@@ -210,6 +212,13 @@ h6 {
     }
     @media (max-width: 575px){
         margin-bottom: 5em;
+    }
+}
+
+.text {
+    p {
+        font-size: 1.1em;
+        margin-bottom: 1em;
     }
 }
 

@@ -370,7 +370,7 @@ function Home() {
             </Container>
 
             <section className='d-none d-md-block balloons'>
-                <img src='imgs/bg/bg-balloons.png' className='bg'/>
+                <img src='imgs/bg/bg-balloons.png' alt='шары' className='bg'/>
                 <Container>
                     <Row>
                         <Col xs={12} lg={7} xxl={6}>

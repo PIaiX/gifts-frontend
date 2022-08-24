@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { FiHeart } from "react-icons/fi";
 import StarRating from './utils/StarRating';
 import BtnFav from './utils/BtnFav';
 

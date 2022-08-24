@@ -3,6 +3,7 @@ import { useRoutes, useLocation } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import Layout from '../components/Layout';
 import Home from '../pages/Home';
+import Delivery from '../pages/Delivery';
 
 export const routeList = [
     {
@@ -10,6 +11,7 @@ export const routeList = [
       element: <Layout/>,
       children: [
         {index: true, element: <Home /> , breadcrumb: 'Главная'},
+        {path: 'delivery', element: <Delivery/>, breadcrumb: 'Доставка и оплата'},
         {path: 'catalog', element: <Home/>, breadcrumb: 'Каталог'},
         {path: 'balloons', element: <Home/>, breadcrumb: 'Шары'},
         {path: 'cart', element: <Home/>, breadcrumb: 'Корзина'},

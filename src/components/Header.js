@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FiSearch, FiMenu, FiUser, FiHeart, FiShoppingCart, FiX } from "react-icons/fi";
 import { IoLocationSharp } from "react-icons/io5";
 
@@ -33,7 +33,7 @@ function Header(props) {
             <Container>
                 <div className="w-100 d-flex justify-content-between align-items-end">
                     <Link to='/' className='d-none d-md-block me-2 me-xl-4'>
-                        <img src='imgs/logo.png' className='logo'/>
+                        <img src='imgs/logo.png' className='logo' alt='Подарки'/>
                     </Link>
                     <div className='flex-1 d-flex justify-content-between align-items-center'>
                         <button type='button' className='d-none d-lg-block btn-1 me-2 me-xl-4'>
@@ -79,22 +79,24 @@ function Header(props) {
                 <hr/>
                 <nav className='main'>
                     <ul>
-                        <li><a href="/">Новинки</a></li>
-                        <li><a href="/">Акции</a></li>
-                        <li><a href="/">Доставка и оплата</a></li>
-                        <li><a href="/">Возврат</a></li>
-                        <li><a href="/">Новости</a></li>
-                        <li><a href="/">Контакты</a></li>
-                        <li><a href="/">Контакты</a></li>
-                        <li><a href="/">Контакты</a></li>
-                        <li><a href="/">Контакты</a></li>
+                        <li><NavLink to='/'>Новинки</NavLink></li>
+                        <li><NavLink to='/'>Акции</NavLink></li>
+                        <li><NavLink to='/delivery'>Доставка и оплата</NavLink></li>
+                        <li><NavLink to='/'>Возврат</NavLink></li>
+                        <li><NavLink to='/'>Новости</NavLink></li>
+                        <li><NavLink to='/'>Контакты</NavLink></li>
+                        <li><NavLink to='/'>Контакты</NavLink></li>
+                        <li><NavLink to='/'>Контакты</NavLink></li>
+                        <li><NavLink to='/'>Контакты</NavLink></li>
                     </ul>
                 </nav>
             </Container>
         </header>
         <Offcanvas show={show} onHide={handleClose}>
             <Offcanvas.Body>
-                <button type='button' className='close' onClick={handleClose}><FiX/></button>
+                <button type='button' className='close' onClick={handleClose}>
+                    <FiX/>
+                </button>
                 <h4>Меню</h4>
                 <div className='mb-3'>
                     <span className='fw-3'>Ваш город:</span>
@@ -106,15 +108,15 @@ function Header(props) {
                 </div>
                 <nav className='mb-4'>
                     <ul>
-                        <li><a href="/">Новинки</a></li>
-                        <li><a href="/">Акции</a></li>
-                        <li><a href="/">Доставка и оплата</a></li>
-                        <li><a href="/">Возврат</a></li>
-                        <li><a href="/">Новости</a></li>
-                        <li><a href="/">Контакты</a></li>
-                        <li><a href="/">Контакты</a></li>
-                        <li><a href="/">Контакты</a></li>
-                        <li><a href="/">Контакты</a></li>
+                        <li><NavLink to='/'>Новинки</NavLink></li>
+                        <li><NavLink to='/'>Акции</NavLink></li>
+                        <li><NavLink to='/delivery'>Доставка и оплата</NavLink></li>
+                        <li><NavLink to='/'>Возврат</NavLink></li>
+                        <li><NavLink to='/'>Новости</NavLink></li>
+                        <li><NavLink to='/'>Контакты</NavLink></li>
+                        <li><NavLink to='/'>Контакты</NavLink></li>
+                        <li><NavLink to='/'>Контакты</NavLink></li>
+                        <li><NavLink to='/'>Контакты</NavLink></li>
                     </ul>
                 </nav>
                 <button type='button' className='main-color text-decoration-underline mb-3'>Заказать звонок</button>
