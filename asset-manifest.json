@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gifts-react/static/css/main.89da1707.css",
-    "main.js": "/gifts-react/static/js/main.131c6065.js",
+    "main.js": "/gifts-react/static/js/main.1228c5bb.js",
     "static/media/horizontal.jpg": "/gifts-react/static/media/horizontal.9ace9c0c111901736f9a.jpg",
     "static/media/Mont-ThinItalic.eot": "/gifts-react/static/media/Mont-ThinItalic.5510e8d36aaaf841911a.eot",
     "static/media/Mont-ExtraLightItalic.eot": "/gifts-react/static/media/Mont-ExtraLightItalic.0329ea9a75589c1375c9.eot",
@@ -75,10 +75,10 @@
     "static/media/Magnoliascript.woff2": "/gifts-react/static/media/Magnoliascript.a0c207d82884df4886bd.woff2",
     "index.html": "/gifts-react/index.html",
     "main.89da1707.css.map": "/gifts-react/static/css/main.89da1707.css.map",
-    "main.131c6065.js.map": "/gifts-react/static/js/main.131c6065.js.map"
+    "main.1228c5bb.js.map": "/gifts-react/static/js/main.1228c5bb.js.map"
   },
   "entrypoints": [
     "static/css/main.89da1707.css",
-    "static/js/main.131c6065.js"
+    "static/js/main.1228c5bb.js"
   ]
 }
