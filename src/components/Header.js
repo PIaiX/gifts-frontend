@@ -67,7 +67,7 @@ function Header(props) {
                                     </button>
                                 </li>
                                 <li className='d-block d-lg-none'>
-                                    <button type='button' onClick={handleShow}>
+                                    <button type='button' onClick={handleClose}>
                                         <FiMenu className='fs-20'/>
                                     </button>
                                 </li>
