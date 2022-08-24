@@ -204,6 +204,7 @@ h6 {
 .main-color {color: $main-color;}
 .gray {color: $gray;}
 
+.br {border-radius: $radius;}
 .flex-1 {flex:1;}
 .mb-8 {
     margin-bottom: 8em;
@@ -213,6 +214,15 @@ h6 {
     @media (max-width: 575px){
         margin-bottom: 5em;
     }
+}
+
+.icon {
+    background: $gradient;
+    color: #fff;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    @include flex-center();
 }
 
 .text {
@@ -794,7 +804,6 @@ figure.product-card {
         width: 65%;
     }
 }
-
 
 
 .balloons {

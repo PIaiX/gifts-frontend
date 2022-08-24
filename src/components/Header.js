@@ -81,13 +81,11 @@ function Header(props) {
                     <ul>
                         <li><NavLink to='/'>Новинки</NavLink></li>
                         <li><NavLink to='/'>Акции</NavLink></li>
+                        <li><NavLink to='/'>О компании</NavLink></li>
                         <li><NavLink to='/delivery'>Доставка и оплата</NavLink></li>
                         <li><NavLink to='/returns'>Возврат</NavLink></li>
                         <li><NavLink to='/'>Новости</NavLink></li>
-                        <li><NavLink to='/'>Контакты</NavLink></li>
-                        <li><NavLink to='/'>Контакты</NavLink></li>
-                        <li><NavLink to='/'>Контакты</NavLink></li>
-                        <li><NavLink to='/'>Контакты</NavLink></li>
+                        <li><NavLink to='/contacts'>Контакты</NavLink></li>
                     </ul>
                 </nav>
             </Container>
@@ -110,13 +108,11 @@ function Header(props) {
                     <ul>
                         <li><NavLink to='/'>Новинки</NavLink></li>
                         <li><NavLink to='/'>Акции</NavLink></li>
+                        <li><NavLink to='/'>О компании</NavLink></li>
                         <li><NavLink to='/delivery'>Доставка и оплата</NavLink></li>
                         <li><NavLink to='/returns'>Возврат</NavLink></li>
                         <li><NavLink to='/'>Новости</NavLink></li>
-                        <li><NavLink to='/'>Контакты</NavLink></li>
-                        <li><NavLink to='/'>Контакты</NavLink></li>
-                        <li><NavLink to='/'>Контакты</NavLink></li>
-                        <li><NavLink to='/'>Контакты</NavLink></li>
+                        <li><NavLink to='/contacts'>Контакты</NavLink></li>
                     </ul>
                 </nav>
                 <button type='button' className='main-color text-decoration-underline mb-3'>Заказать звонок</button>

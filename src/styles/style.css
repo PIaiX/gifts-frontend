@@ -267,6 +267,10 @@ h6 {
   color: #9D9D9D;
 }
 
+.br {
+  border-radius: 2.5em;
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -283,6 +287,17 @@ h6 {
   .mb-8 {
     margin-bottom: 5em;
   }
+}
+
+.icon {
+  background: linear-gradient(90deg, #E1313B -64.68%, #FF4E58 182.57%);
+  color: #fff;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text p {

@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Home from '../pages/Home';
 import Delivery from '../pages/Delivery';
 import Returns from '../pages/Returns';
+import Contacts from '../pages/Contacts';
 
 export const routeList = [
     {
@@ -14,6 +15,7 @@ export const routeList = [
         {index: true, element: <Home /> , breadcrumb: 'Главная'},
         {path: 'delivery', element: <Delivery/>, breadcrumb: 'Доставка и оплата'},
         {path: 'returns', element: <Returns/>, breadcrumb: 'Возврат'},
+        {path: 'contacts', element: <Contacts/>, breadcrumb: 'Контакты'},
         {path: 'catalog', element: <Home/>, breadcrumb: 'Каталог'},
         {path: 'balloons', element: <Home/>, breadcrumb: 'Шары'},
         {path: 'cart', element: <Home/>, breadcrumb: 'Корзина'},
