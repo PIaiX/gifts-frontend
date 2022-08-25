@@ -271,6 +271,10 @@ h6 {
   border-radius: 2.5em;
 }
 
+.br-1 {
+  border-radius: 1em;
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -339,6 +343,67 @@ h6 {
 }
 .breadcrumbs ul li a.active {
   pointer-events: none;
+}
+
+.accordion {
+  --bs-accordion-color: $font-color;
+  --bs-accordion-active-color: $font-color;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-active-bg:transparent;
+  --bs-accordion-btn-icon: url(imgs/plus.svg);
+  --bs-accordion-btn-active-icon: url(imgs/plus.svg);
+  --bs-accordion-btn-icon-width: 2rem;
+  --bs-accordion-btn-icon-size: 1.25rem;
+  --bs-accordion-btn-icon-transform: rotate(45deg);
+  --bs-accordion-body-padding-x: 0px;
+  --bs-accordion-body-padding-y: 0px;
+  --bs-accordion-btn-padding-x: 0px;
+  --bs-accordion-btn-padding-y: 1em;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+@media (max-width: 991px) {
+  .accordion {
+    --bs-accordion-btn-icon-width: 1.5rem;
+    --bs-accordion-btn-icon-size: 1.1rem;
+  }
+}
+@media (max-width: 767px) {
+  .accordion {
+    --bs-accordion-btn-icon-width: 1.25rem;
+    --bs-accordion-btn-icon-size: .9rem;
+  }
+}
+@media (max-width: 575px) {
+  .accordion {
+    --bs-accordion-btn-icon-width: 1.1rem;
+    --bs-accordion-btn-icon-size: .75rem;
+  }
+}
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid rgba(24, 24, 24, 0.1);
+}
+.accordion-button {
+  font-size: var(--bs-accordion-btn-icon-size);
+  font-weight: 600;
+}
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+.accordion-button::after {
+  background-color: #DD4141;
+  background-size: 50%;
+  border-radius: 50%;
+  background-position: center;
+}
+.accordion-body {
+  padding-bottom: 1em;
+  padding-right: 25%;
+}
+@media (max-width: 1399px) {
+  .accordion-body {
+    padding-right: 0%;
+  }
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -957,7 +1022,7 @@ figure.product-card button {
     margin-top: 0px;
   }
 }
-.help .bg {
+.help .bg, .help .balloons .bg-3, .balloons .help .bg-3, .help .balloons .bg-2, .balloons .help .bg-2 {
   position: absolute;
   right: 5%;
   bottom: 0px;
@@ -969,14 +1034,14 @@ figure.product-card button {
      object-position: right bottom;
 }
 @media (max-width: 991px) {
-  .help .bg {
+  .help .bg, .help .balloons .bg-3, .balloons .help .bg-3, .help .balloons .bg-2, .balloons .help .bg-2 {
     height: 100%;
     width: 37%;
     right: 0%;
   }
 }
 @media (max-width: 767px) {
-  .help .bg {
+  .help .bg, .help .balloons .bg-3, .balloons .help .bg-3, .help .balloons .bg-2, .balloons .help .bg-2 {
     width: 50%;
   }
 }
@@ -1020,14 +1085,13 @@ figure.product-card button {
   background-blend-mode: overlay;
   padding: 3em 0;
   position: relative;
-  overflow: hidden;
 }
 @media (max-width: 1399px) {
   .balloons {
     padding: 3em 0 1em;
   }
 }
-.balloons .bg {
+.balloons .bg, .balloons .bg-3, .balloons .bg-2 {
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -1040,8 +1104,37 @@ figure.product-card button {
   z-index: 1;
 }
 @media (max-width: 991px) {
-  .balloons .bg {
+  .balloons .bg, .balloons .bg-3, .balloons .bg-2 {
     opacity: 0.3;
+  }
+}
+.balloons .bg-2 {
+  height: 130%;
+  right: 5%;
+}
+@media (max-width: 1399px) {
+  .balloons .bg-2 {
+    right: 0%;
+  }
+}
+@media (max-width: 991px) {
+  .balloons .bg-2 {
+    height: 100%;
+  }
+}
+.balloons .bg-3 {
+  height: 130%;
+  right: 20%;
+}
+@media (max-width: 1399px) {
+  .balloons .bg-3 {
+    right: 15%;
+  }
+}
+@media (max-width: 991px) {
+  .balloons .bg-3 {
+    height: 100%;
+    right: 25%;
   }
 }
 .balloons figure.product-card:hover {
@@ -1050,6 +1143,25 @@ figure.product-card button {
 .balloons .container {
   position: relative;
   z-index: 2;
+}
+
+.company-sec .img-240 {
+  width: 240px;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 991px) {
+  .company-sec .img-240 {
+    width: 200px;
+    height: 200px;
+  }
+}
+.company-sec .img-200 {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {

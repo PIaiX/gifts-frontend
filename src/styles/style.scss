@@ -205,6 +205,7 @@ h6 {
 .gray {color: $gray;}
 
 .br {border-radius: $radius;}
+.br-1 {border-radius: 1em;}
 .flex-1 {flex:1;}
 .mb-8 {
     margin-bottom: 8em;
@@ -264,6 +265,57 @@ h6 {
                 &:hover, &:focus {color: $font-color;}
                 &.active {pointer-events: none;}
             }
+        }
+    }
+}
+
+.accordion {
+    --bs-accordion-color: $font-color;
+    --bs-accordion-active-color: $font-color;
+    --bs-accordion-bg: transparent;
+    --bs-accordion-active-bg:transparent;
+    --bs-accordion-btn-icon: url(imgs/plus.svg);
+    --bs-accordion-btn-active-icon: url(imgs/plus.svg);
+    --bs-accordion-btn-icon-width: 2rem;
+    --bs-accordion-btn-icon-size: 1.25rem;
+    --bs-accordion-btn-icon-transform: rotate(45deg);
+    --bs-accordion-body-padding-x: 0px;
+    --bs-accordion-body-padding-y: 0px;
+    --bs-accordion-btn-padding-x: 0px;
+    --bs-accordion-btn-padding-y: 1em;
+    --bs-accordion-btn-focus-box-shadow: none;
+    @media (max-width: 991px) {
+        --bs-accordion-btn-icon-width: 1.5rem;
+        --bs-accordion-btn-icon-size: 1.1rem;
+    }
+    @media (max-width: 767px) {
+        --bs-accordion-btn-icon-width: 1.25rem;
+        --bs-accordion-btn-icon-size: .9rem;
+    }
+    @media (max-width: 575px) {
+        --bs-accordion-btn-icon-width: 1.1rem;
+        --bs-accordion-btn-icon-size: .75rem;
+    }
+    &-item {
+        border: none;
+        border-bottom: 1px solid transparentize($color: $font-color, $amount: 0.9);
+    }
+    &-button {
+        font-size: var(--bs-accordion-btn-icon-size);
+        font-weight: 600;
+        &:not(.collapsed){box-shadow:none;}
+        &::after {
+            background-color: $main-color;
+            background-size: 50%;
+            border-radius: 50%;
+            background-position: center;
+        }
+    }
+    &-body {
+        padding-bottom: 1em;
+        padding-right: 25%;
+        @media (max-width: 1399px) {
+            padding-right: 0%;
         }
     }
 }
@@ -813,7 +865,6 @@ figure.product-card {
     background-blend-mode: overlay;
     padding: 3em 0;
     position: relative;
-    overflow: hidden;
     @media (max-width: 1399px) {
         padding: 3em 0 1em;
     }
@@ -829,6 +880,29 @@ figure.product-card {
         @media (max-width: 991px){
             opacity: .3;
         }
+        &-2 {
+            @extend .bg;
+            height: 130%;
+            right: 5%;
+            @media (max-width: 1399px) {
+                right: 0%;
+            }
+            @media (max-width: 991px) {
+                height: 100%;
+            }
+        }
+        &-3 {
+            @extend .bg;
+            height: 130%;
+            right: 20%;
+            @media (max-width: 1399px) {
+                right: 15%;
+            }
+            @media (max-width: 991px) {
+                height: 100%;
+                right: 25%;
+            }
+        }
     }
     figure.product-card:hover {
         background-color: #fff;
@@ -836,6 +910,23 @@ figure.product-card {
     .container {
         position: relative;
         z-index: 2;
+    }
+}
+
+.company-sec {
+    .img-240 {
+        width: 240px;
+        height: 240px;
+        object-fit: cover;
+        @media (max-width: 991px) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .img-200 {
+        width: 200px;
+        height: 200px;
+        object-fit: cover
     }
 }
 
