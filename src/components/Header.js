@@ -36,10 +36,10 @@ function Header(props) {
                         <img src='imgs/logo.png' className='logo' alt='Подарки'/>
                     </Link>
                     <div className='flex-1 d-flex justify-content-between align-items-center'>
-                        <button type='button' className='d-none d-lg-block btn-1 me-2 me-xl-4'>
+                        <Link to='/catalog' className='d-none d-lg-block btn-1 me-2 me-xl-4'>
                             <FiMenu className='fs-12'/>
                             <span className='ms-2'>Каталог</span>
-                        </button>
+                        </Link>
                         <form className='search'>
                             <input type='search' placeholder='Поиск по сайту'/>
                             <button type='button'>

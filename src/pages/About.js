@@ -1,9 +1,9 @@
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion';
 import Breadcrumbs from '../components/utils/Breadcrumbs';
-import { IoAddCircle } from "react-icons/io5";
 
 export default function About(props) {
     return (
