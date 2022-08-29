@@ -3,16 +3,14 @@ import Breadcrumbs from '../components/utils/Breadcrumbs';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
 import Filter from '../components/Filter';
 import ProductCard from '../components/ProductCard';
 import PopularProductsSlider from '../components/PopularProductsSlider';
 import NavPagination from '../components/NavPagination';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FiX } from "react-icons/fi";
-import SubCategoryCard from '../components/SubCategoryCard';
 
-export default function Catalog(props) {
+export default function Category(props) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -23,41 +21,7 @@ export default function Catalog(props) {
                 <Breadcrumbs/>
 
                 <section className='mb-8'>
-                    <h1>Подарки на 23 февраля</h1>
-                    <nav className='categories'>
-                        <ul>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                        </ul>
-                    </nav>
+                    <h1>Аксессуары для мужчины и подростка </h1>
 
                     <Row>
                         <Col lg={3} className='d-none d-lg-block'>
@@ -128,7 +92,7 @@ export default function Catalog(props) {
                 <PopularProductsSlider/>
             </Container>
         </main>
-
+        
         <Offcanvas show={show} onHide={handleClose}>
             <Offcanvas.Body>
                 <button type='button' className='close' onClick={handleClose}>

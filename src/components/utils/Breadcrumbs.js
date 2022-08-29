@@ -1,6 +1,6 @@
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
 import { routeList } from '../../routes/AppRouter';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Breadcrumbs() {
     const breadcrumbs = useBreadcrumbs(routeList);
@@ -10,7 +10,7 @@ export default function Breadcrumbs() {
             {
                 breadcrumbs.map(({match, breadcrumb}) => (
                     <li key={match.pathname}>
-                        <NavLink to={match.pathname}>{breadcrumb}</NavLink>
+                        <Link to={match.pathname}>{breadcrumb}</Link>
                     </li>
                 ))
             }

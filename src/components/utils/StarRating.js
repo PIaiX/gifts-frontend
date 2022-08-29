@@ -9,11 +9,11 @@ export default function StarRating(props) {
             {
                 arr.map( item => {
                     if(item <= num){
-                        return <ImStarFull />
+                        return <ImStarFull key={item} />
                     } else if( item === numRound){
-                        return <ImStarHalf />
+                        return <ImStarHalf key={item} />
                     } else {
-                        return <ImStarEmpty />
+                        return <ImStarEmpty key={item} />
                     }
                 })
             }

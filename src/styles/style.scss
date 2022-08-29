@@ -6,7 +6,7 @@ $light-color: #FFE8E8;
 $dark-gray: #181818;
 $gray: #9D9D9D;
 $gradient: linear-gradient(90deg, #E1313B -64.68%, #FF4E58 182.57%);
-$transition: .3s;
+$transition: .3s ease;
 $radius: 2.5em;
 
 // "homepage": "https://ngf93.github.io/gifts-react",
@@ -22,6 +22,7 @@ $radius: 2.5em;
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
+    outline: none;
 }
 
 
@@ -54,6 +55,12 @@ input, textarea {
         opacity: 0.4;
         font-weight: inherit;
     }
+    &.style-2 {
+        background: transparentize($color: $font-color, $amount: .95);
+        border-radius: .5em;
+        box-shadow: none;
+        padding: .5em 1em;
+    }
 }
 input {
     &[type='checkbox']{
@@ -81,6 +88,10 @@ select {
     @include no-appearance;
     border: none;
     color: transparentize($color: $font-color, $amount: 0.4);
+    background: url(imgs/down.svg) no-repeat;
+    background-position: right center;
+    background-size: .6em;
+    padding-right: 1em;
 }
 label {
     display: flex;
@@ -173,11 +184,20 @@ form {
                 font-weight: 600;
                 color: transparentize($color: $font-color, $amount: 0.2);
                 margin-bottom: 1em;
+                cursor: pointer;
                 svg {margin-right: .5em;}
             }
             .content {
                 font-weight: 300;
+                transition: max-height $transition;
+                overflow: hidden;
                 label:not(:first-child){margin-top: .5em;}
+                &[data-state="shown"]{
+                    max-height: 200px;
+                }
+                &[data-state="hidden"]{
+                    max-height: 0px;
+                }
             }
         }
     }
@@ -320,10 +340,43 @@ h6 {
                     margin-right: .5em;
                 }
             }
+            &:last-child {
+                a {pointer-events: none;}
+            }
             a {
                 transition: $transition;
                 &:hover, &:focus {color: $font-color;}
-                &.active {pointer-events: none;}
+            }
+        }
+    }
+}
+
+.pagination {
+    ul {
+        margin: 0 auto;
+        padding-left: 0px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+            &:not(:first-child){margin-left: .75em;}
+            a {
+                @include flex-center();
+                font-size: 1.25em;
+                font-weight: 600;
+                width: 1.8em;
+                height: 1.8em;
+                border-radius: .4em;
+                background-color: transparentize($color: $font-color, $amount: 0.8);
+                color: #fff !important;
+                transition: $transition;
+                &:hover {
+                    background-color: transparentize($color: $font-color, $amount: 0.5);
+                }
+                &.active {
+                    background-color: $main-color;
+                }
             }
         }
     }
@@ -1073,7 +1126,6 @@ figure.product-card {
         object-fit: cover
     }
 }
-
 
 
 footer {

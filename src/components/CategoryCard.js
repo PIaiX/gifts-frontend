@@ -4,7 +4,7 @@ export default function CategoryCard(props) {
     return (
         <figure className='category-card'>
             <img src={props.imgUrl} alt={props.title} />
-            <figcaption><h3><Link to='/'>{props.title}</Link></h3></figcaption>
+            <figcaption><h3><Link to='/catalog/category'>{props.title}</Link></h3></figcaption>
         </figure>
     );
 }

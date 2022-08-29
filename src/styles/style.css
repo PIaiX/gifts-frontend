@@ -23,7 +23,7 @@ input, textarea {
   line-height: normal;
   outline: none;
   display: block;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: inherit;
@@ -40,12 +40,19 @@ input::placeholder, textarea::placeholder {
   opacity: 0.4;
   font-weight: inherit;
 }
+input.style-2, textarea.style-2 {
+  background: rgba(24, 24, 24, 0.05);
+  border-radius: 0.5em;
+  box-shadow: none;
+  padding: 0.5em 1em;
+}
 
 input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
+  outline: none;
   width: 1em;
   height: 1em;
   background-color: #fff;
@@ -58,7 +65,7 @@ input[type=checkbox] {
   box-shadow: none;
   padding: 0px;
   margin: 0px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 input[type=checkbox]:checked {
   border: 1px solid #DD4141;
@@ -70,8 +77,13 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
+  outline: none;
   border: none;
   color: rgba(24, 24, 24, 0.6);
+  background: url(imgs/down.svg) no-repeat;
+  background-position: right center;
+  background-size: 0.6em;
+  padding-right: 1em;
 }
 
 label {
@@ -100,7 +112,7 @@ button {
   align-items: center;
   padding: 0.9em 2em;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.3s ease;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -176,15 +188,24 @@ form.filter fieldset legend {
   font-weight: 600;
   color: rgba(24, 24, 24, 0.8);
   margin-bottom: 1em;
+  cursor: pointer;
 }
 form.filter fieldset legend svg {
   margin-right: 0.5em;
 }
 form.filter fieldset .content {
   font-weight: 300;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
 }
 form.filter fieldset .content label:not(:first-child) {
   margin-top: 0.5em;
+}
+form.filter fieldset .content[data-state=shown] {
+  max-height: 200px;
+}
+form.filter fieldset .content[data-state=hidden] {
+  max-height: 0px;
 }
 
 /* Text styles */
@@ -399,14 +420,45 @@ h6 {
   content: "/";
   margin-right: 0.5em;
 }
+.breadcrumbs ul li:last-child a {
+  pointer-events: none;
+}
 .breadcrumbs ul li a {
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 .breadcrumbs ul li a:hover, .breadcrumbs ul li a:focus {
   color: #181818;
 }
-.breadcrumbs ul li a.active {
-  pointer-events: none;
+
+.pagination ul {
+  margin: 0 auto;
+  padding-left: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination ul li:not(:first-child) {
+  margin-left: 0.75em;
+}
+.pagination ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25em;
+  font-weight: 600;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 0.4em;
+  background-color: rgba(24, 24, 24, 0.2);
+  color: #fff !important;
+  transition: 0.3s ease;
+}
+.pagination ul li a:hover {
+  background-color: rgba(24, 24, 24, 0.5);
+}
+.pagination ul li a.active {
+  background-color: #DD4141;
 }
 
 .accordion {
@@ -497,7 +549,7 @@ h6 {
   opacity: 0.1;
   width: 0.75em;
   height: 0.75em;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 .swiper-pagination-bullet-active {
   background-color: #DD4141;
@@ -656,7 +708,7 @@ header nav.menu2 button, header nav.menu2 a {
   flex-direction: column;
   align-items: center;
   opacity: 0.5;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 header nav.menu2 button:hover, header nav.menu2 button:focus, header nav.menu2 a:hover, header nav.menu2 a:focus {
   opacity: 1;
@@ -680,7 +732,7 @@ header nav.main ul {
 }
 header nav.main ul li a {
   opacity: 0.4;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 header nav.main ul li a:hover, header nav.main ul li a:focus {
   opacity: 1;
@@ -715,7 +767,7 @@ header .search {
   height: 1.5em;
   color: #181818;
   opacity: 0.5;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 .offcanvas .close:active {
   color: #DD4141;
@@ -1021,7 +1073,7 @@ figure.product-card {
   border-radius: 1em;
   background-color: transparent;
   box-shadow: 0px 0px 0px rgba(45, 45, 45, 0.12);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 @media (max-width: 1659px) {
   figure.product-card {
@@ -1102,7 +1154,7 @@ figure.product-card del {
 }
 figure.product-card button {
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 @media (max-width: 991px) {
   figure.product-card button {
@@ -1368,7 +1420,7 @@ footer .mobile ul {
 footer .mobile ul a {
   color: #656565;
   background-color: transparent;
-  transition: 0.3s;
+  transition: 0.3s ease;
   width: 60px;
   height: 60px;
   display: flex;
