@@ -9,6 +9,7 @@ import Contacts from '../pages/Contacts';
 import About from '../pages/About';
 import Catalog from '../pages/Catalog';
 import Category from '../pages/Category';
+import Product from '../pages/Product';
 
 export const routeList = [
     {
@@ -22,6 +23,7 @@ export const routeList = [
         {path: 'contacts', element: <Contacts/>, breadcrumb: 'Контакты'},
         {path: 'catalog', element: <Catalog/>, breadcrumb: 'Каталог'},
         {path: 'catalog/category', element: <Category/>, breadcrumb: 'Категория'},
+        {path: 'catalog/category/product', element: <Product/>, breadcrumb: 'Товар'},
         {path: 'balloons', element: <Home/>, breadcrumb: 'Шары'},
         {path: 'cart', element: <Home/>, breadcrumb: 'Корзина'},
         {path: 'account', element: <Home/>, breadcrumb: 'Личный аккаунт'},
