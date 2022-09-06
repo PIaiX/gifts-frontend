@@ -61,10 +61,10 @@ function Header(props) {
                                     </button>
                                 </li>
                                 <li className='d-none d-lg-block'>
-                                    <button type='button'>
+                                    <Link to='/cart'>
                                         <FiShoppingCart className='fs-20'/>
                                         <span>Корзина</span>
-                                    </button>
+                                    </Link>
                                 </li>
                                 <li className='d-block d-lg-none'>
                                     <button type='button' onClick={handleShow}>

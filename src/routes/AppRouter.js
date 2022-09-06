@@ -10,6 +10,7 @@ import About from '../pages/About';
 import Catalog from '../pages/Catalog';
 import Category from '../pages/Category';
 import Product from '../pages/Product';
+import ShoppingCart from '../pages/ShoppingCart';
 
 export const routeList = [
     {
@@ -25,7 +26,7 @@ export const routeList = [
         {path: 'catalog/category', element: <Category/>, breadcrumb: 'Категория'},
         {path: 'catalog/category/product', element: <Product/>, breadcrumb: 'Товар'},
         {path: 'balloons', element: <Home/>, breadcrumb: 'Шары'},
-        {path: 'cart', element: <Home/>, breadcrumb: 'Корзина'},
+        {path: 'cart', element: <ShoppingCart/>, breadcrumb: 'Корзина'},
         {path: 'account', element: <Home/>, breadcrumb: 'Личный аккаунт'},
       ],
     },

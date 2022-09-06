@@ -135,6 +135,13 @@ button {
             color: #fff;
         }
     }
+    &-2 {
+        @extend .btn;
+        background: #fff;
+        color: $main-color;
+        font-weight: 600;
+        border-radius: $radius;
+    }
     &-fav {
         background-color: #fff;
         border-radius: 50%;
@@ -144,6 +151,12 @@ button {
         height: 1.65em;
         &[data-checked='true']{color: $main-color;}
         svg {stroke-width: 2.5px;}
+    }
+    &-del {
+        color: #7E7E7E;
+        font-size: 1.75em;
+        width: 1.65em;
+        height: 1.65em;
     }
     &-share {
         background-color: #fff;
@@ -268,6 +281,7 @@ h6 {
 .fs {
     &-08 {font-size: 0.8em;}
     &-09 {font-size: 0.9em;}
+    &-10 {font-size: 1em;}
     &-11 {font-size: 1.1em;}
     &-12 {font-size: 1.2em;}
     &-13 {font-size: 1.3em;}
@@ -320,7 +334,10 @@ h6 {
     border-radius: 50%;
     @include flex-center();
 }
-
+.box {
+    background: rgba(24, 24, 24, 0.04);
+    border-radius: 2em;
+}
 .text {
     p {
         font-size: 1.1em;
@@ -919,6 +936,43 @@ figure.product-card {
     background-color: transparent;
     box-shadow: 0px 0px 0px rgba(45, 45, 45, 0.12);
     transition: $transition;
+    &-horizontal {
+        display: flex;
+        align-items: flex-start;
+        img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 1em;
+            margin-right: 1em;
+            background-color: #fff;
+            @media (max-width: 1399px) {
+                width: 90px;
+                height: 90px;
+                margin-right: .5em;
+            }
+            @media (max-width: 1399px) {
+                width: 75px;
+                height: 75px;
+                margin-right: .5em;
+            }
+        }
+        h6 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .price {
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        del {
+            color: #C5C5C5;
+            font-size: .8em;
+            margin-left: 1em;
+        }
+    }
     @media (max-width: 1659px) {
         padding: .5em;
     }
@@ -1083,8 +1137,6 @@ figure.product-card {
         }
     }
     .box {
-        background: rgba(24, 24, 24, 0.04);
-        border-radius: 2em;
         padding: 2em;
         @media (max-width: 1399px){
             padding: 1.5em;
@@ -1173,6 +1225,92 @@ figure.product-card {
     margin-bottom: 1em;
 }
 
+/* Shopping csrt */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 0;
+    border-bottom: 1px solid transparentize($color: $font-color, $amount: .9);
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+    }
+    figure {
+        display: flex;
+        align-items: center;
+        width: 550px;
+        @media (max-width: 767px) {
+            margin-bottom: 1em;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 1em;
+            margin-right: 1.5em;
+            @media (max-width: 1399px) {
+                width: 125px;
+                height: 125px;
+                margin-right: 1em;
+            }
+            @media (max-width: 1199px) {
+                width: 100px;
+                height: 100px;
+                margin-right: .5em;
+            }
+        }
+        figcaption {
+            flex: 1;
+            h5  {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .price {
+                font-size: 1.25em;
+                font-weight: 600;
+            }
+            del {
+                color: #c5c5c5;
+                font-size: .9em;
+                margin-left: 1em;
+            }
+        }
+    }
+    .controls {
+        display: flex;
+        align-items: center;
+        @media (max-width: 767px) {
+            width: 100%;
+            justify-content: space-between;
+        }
+        .input-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5em 1em;
+            @media (max-width: 1399px) {
+                padding: 0.25em 0.75em;
+            }
+            input {
+                background-color: rgba(0,0,0,0);
+                font-size: 1.1em;
+                text-align: center;
+                box-shadow: none;
+                padding: 0.5em;
+                width: 100px;
+                @media (max-width: 1399px) {
+                    width: 80px;
+                }
+            }
+            button {
+                color: #7e7e7e;
+                font-size: 1.75em;
+            }
+        }
+    }
+}
 
 .offers {
     padding: 3em 0;
