@@ -55,10 +55,10 @@ function Header(props) {
                                     </button>
                                 </li>
                                 <li>
-                                    <button type='button'>
+                                    <Link to='/favorites'>
                                         <FiHeart className='fs-20'/>
                                         <span className='d-none d-lg-block'>Избранное</span>
-                                    </button>
+                                    </Link>
                                 </li>
                                 <li className='d-none d-lg-block'>
                                     <Link to='/cart'>

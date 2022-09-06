@@ -12,6 +12,7 @@ import Category from '../pages/Category';
 import Product from '../pages/Product';
 import ShoppingCart from '../pages/ShoppingCart';
 import Checkout from '../pages/Checkout';
+import Favorites from '../pages/Favorites';
 
 export const routeList = [
     {
@@ -23,6 +24,7 @@ export const routeList = [
         {path: 'delivery', element: <Delivery/>, breadcrumb: 'Доставка и оплата'},
         {path: 'returns', element: <Returns/>, breadcrumb: 'Возврат'},
         {path: 'contacts', element: <Contacts/>, breadcrumb: 'Контакты'},
+        {path: 'favorites', element: <Favorites/>, breadcrumb: 'Избранное'},
         {path: 'catalog', element: <Catalog/>, breadcrumb: 'Каталог'},
         {path: 'catalog/category', element: <Category/>, breadcrumb: 'Категория'},
         {path: 'catalog/category/product', element: <Product/>, breadcrumb: 'Товар'},
