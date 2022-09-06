@@ -44,7 +44,7 @@ export default function ShoppingCart(props) {
                                                 <del className='fs-13 fw-6 gray ms-3'>5 000 ₽</del>
                                             </div>
                                         </div>
-                                        <button type='button' className='btn-1 w-100 mt-3 mt-sm-4'>Перейти к оформлению</button>
+                                        <Link to='checkout' className='btn-1 w-100 mt-3 mt-sm-4'>Перейти к оформлению</Link>
                                     </div>
                                 </Col>
                                 <Col>

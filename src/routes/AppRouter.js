@@ -11,6 +11,7 @@ import Catalog from '../pages/Catalog';
 import Category from '../pages/Category';
 import Product from '../pages/Product';
 import ShoppingCart from '../pages/ShoppingCart';
+import Checkout from '../pages/Checkout';
 
 export const routeList = [
     {
@@ -27,6 +28,7 @@ export const routeList = [
         {path: 'catalog/category/product', element: <Product/>, breadcrumb: 'Товар'},
         {path: 'balloons', element: <Home/>, breadcrumb: 'Шары'},
         {path: 'cart', element: <ShoppingCart/>, breadcrumb: 'Корзина'},
+        {path: 'cart/checkout', element: <Checkout/>, breadcrumb: 'Оформление заказа'},
         {path: 'account', element: <Home/>, breadcrumb: 'Личный аккаунт'},
       ],
     },
