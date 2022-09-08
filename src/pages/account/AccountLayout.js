@@ -10,10 +10,10 @@ const AccountLayout = ({isMobile}) => {
             isMobile
             ? <Outlet/>
             : <Row className='gx-5'>
-                <Col md={3}>
+                <Col md={4} xxl={3}>
                     <AccountMenu/>
                 </Col>
-                <Col md={9}>
+                <Col md={8} xxl={9}>
                     <Outlet/>
                 </Col>
             </Row>

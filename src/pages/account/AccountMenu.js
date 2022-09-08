@@ -1,9 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import { FiUser, FiMapPin, FiCreditCard, FiBell, FiLogOut, FiShoppingBag, FiHelpCircle } from "react-icons/fi";
-import { VscHistory, VscSignOut } from "react-icons/vsc";
-import { MdLogout, MdOutlineHistory } from "react-icons/md";
-import { IoHelpCircleOutline } from "react-icons/io5";
-import { GrHistory } from "react-icons/gr";
 
 export default function AccountMenu() {
     return (
