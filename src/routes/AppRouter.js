@@ -13,6 +13,10 @@ import Product from '../pages/Product';
 import ShoppingCart from '../pages/ShoppingCart';
 import Checkout from '../pages/Checkout';
 import Favorites from '../pages/Favorites';
+import Login from '../pages/Login';
+import ResetPassword from '../pages/ResetPassword';
+import Registration from '../pages/Registration';
+import Account from '../pages/account/Account';
 
 export const routeList = [
     {
@@ -31,7 +35,10 @@ export const routeList = [
         {path: 'balloons', element: <Home/>, breadcrumb: 'Шары'},
         {path: 'cart', element: <ShoppingCart/>, breadcrumb: 'Корзина'},
         {path: 'cart/checkout', element: <Checkout/>, breadcrumb: 'Оформление заказа'},
-        {path: 'account', element: <Home/>, breadcrumb: 'Личный аккаунт'},
+        {path: 'registration', element: <Registration/> , breadcrumb: 'Регистрация'},
+        {path: 'login', element: <Login/> , breadcrumb: 'Вход в личный кабинет'},
+        {path: 'reset-password', element: <ResetPassword/> , breadcrumb: 'Восстановление пароля'},
+        {path: 'account/*', element: <Account/>, breadcrumb: 'Личный аккаунт'},
       ],
     },
   ];

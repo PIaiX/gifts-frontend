@@ -28,17 +28,17 @@ input, textarea {
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: inherit;
   opacity: 0.4;
-  font-weight: inherit;
+  font-weight: 300;
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: inherit;
   opacity: 0.4;
-  font-weight: inherit;
+  font-weight: 300;
 }
 input::placeholder, textarea::placeholder {
   color: inherit;
   opacity: 0.4;
-  font-weight: inherit;
+  font-weight: 300;
 }
 input.style-2, textarea.style-2 {
   background: rgba(24, 24, 24, 0.05);
@@ -94,6 +94,41 @@ label {
 label span {
   flex: 1;
   margin-left: 0.6em;
+}
+
+.password {
+  position: relative;
+}
+.password input {
+  font-size: inherit;
+  font-weight: inherit;
+  position: relative;
+  z-index: 1;
+}
+.password button {
+  position: absolute;
+  top: 0px;
+  right: 0.5em;
+  z-index: 5;
+  color: #9D9D9D;
+  height: 100%;
+  width: 2em;
+  font-size: 1.5em;
+  transition: 0.3s ease;
+}
+.password button:hover, .password button:focus, .password button:active {
+  color: #DD4141;
+}
+
+.form-group {
+  display: flex;
+  align-items: stretch;
+}
+.form-group input {
+  flex: 1;
+}
+.form-group button {
+  margin-left: -2.5em;
 }
 
 button {
@@ -385,8 +420,18 @@ h6 {
   color: #000;
 }
 
+.blue {
+  color: #2D9CDB;
+}
+
 .bg-white {
   background-color: #fff;
+}
+
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .br {
@@ -1822,6 +1867,48 @@ figure.product-card.mini img {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* Account */
+.account-nav {
+  padding: 1.25em 0px;
+}
+@media (max-width: 991px) {
+  .account-nav {
+    padding: 0px;
+  }
+}
+.account-nav ul {
+  list-style: none;
+  padding-left: 0px;
+}
+.account-nav ul li a, .account-nav ul li button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0.75em 0;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  color: rgba(24, 24, 24, 0.6);
+  text-align: left;
+}
+.account-nav ul li a.active, .account-nav ul li button.active {
+  color: #181818;
+}
+.account-nav ul li a span, .account-nav ul li button span {
+  font-size: 1.1em;
+  margin-left: 1em;
+}
+.account-nav ul li a svg, .account-nav ul li button svg {
+  font-size: 1.5em;
+}
+@media (max-width: 991px) {
+  .account .box-2 {
+    box-shadow: none;
+    border-radius: unset;
+  }
 }
 
 footer {

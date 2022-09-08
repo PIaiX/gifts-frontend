@@ -49,10 +49,10 @@ function Header(props) {
                         <nav className='menu2'>
                             <ul className='list-unstyled d-flex'>
                                 <li className='d-none d-lg-block'>
-                                    <button type='button'>
+                                    <Link to='/login'>
                                         <FiUser className='fs-20'/>
                                         <span>Войти</span>
-                                    </button>
+                                    </Link>
                                 </li>
                                 <li>
                                     <Link to='/favorites'>
@@ -75,7 +75,6 @@ function Header(props) {
                         </nav>
                     </div>
                 </div>
-                
                 <hr/>
                 <nav className='main'>
                     <ul>

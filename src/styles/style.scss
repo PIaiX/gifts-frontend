@@ -5,12 +5,11 @@ $main-color: #DD4141;
 $light-color: #FFE8E8;
 $dark-gray: #181818;
 $gray: #9D9D9D;
+$blue: #2D9CDB;
 $gradient: linear-gradient(90deg, #E1313B -64.68%, #FF4E58 182.57%);
 $transition: .3s ease;
 $radius: 2.5em;
 $radius-sm: 1.5em;
-
-// "homepage": "https://ngf93.github.io/gifts-react",
 
 /* mixins */
 @mixin flex-center {
@@ -51,10 +50,16 @@ input, textarea {
     outline: none;
     display: block;
     transition: $transition;
+    &:-moz-placeholder, &::-moz-placeholder,
+    &::-webkit-input-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
+        color: inherit;
+        opacity: 0.4;
+        font-weight: 300;
+    }
     &::placeholder {
         color: inherit;
         opacity: 0.4;
-        font-weight: inherit;
+        font-weight: 300;
     }
     &.style-2 {
         background: transparentize($color: $font-color, $amount: .95);
@@ -63,6 +68,7 @@ input, textarea {
         padding: .5em 1em;
     }
 }
+
 input {
     &[type='checkbox']{
         @include no-appearance;
@@ -101,6 +107,39 @@ label {
     span {
         flex:1;
         margin-left: .6em;
+    }
+}
+
+.password {
+    position: relative;
+    input {
+        font-size: inherit;
+        font-weight: inherit;
+        position: relative;
+        z-index: 1;
+    }
+    button {
+        position: absolute;
+        top: 0px;
+        right: 0.5em;
+        z-index: 5;
+        color: $gray;
+        height: 100%;
+        width: 2em;
+        font-size: 1.5em;
+        transition: $transition;
+        &:hover, &:focus, &:active {
+            color: $main-color;
+        }
+    }
+}
+
+.form-group{
+    display: flex;
+    align-items: stretch;
+    input {flex:1;}
+    button {
+        margin-left: -2.5em;
     }
 }
 
@@ -309,9 +348,11 @@ h6 {
 .main-color {color: $main-color;}
 .gray {color: $gray;}
 .black {color: #000;}
+.blue {color: $blue;}
 
 .bg-white {background-color: #fff;}
 
+.w-fit {width: fit-content;}
 .br {border-radius: $radius;}
 .br-sm {border-radius: $radius-sm;}
 .br-1 {border-radius: 1em;}
@@ -1469,6 +1510,49 @@ figure.product-card {
         width: 200px;
         height: 200px;
         object-fit: cover
+    }
+}
+
+
+/* Account */
+.account {
+    &-nav {
+        padding: 1.25em 0px;
+        @media (max-width: 991px){
+            padding: 0px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0px;
+            li {
+                a, button {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    padding: .75em 0;
+                    position: relative;
+                    overflow: hidden;
+                    font-weight: 600;
+                    color: transparentize($color: $font-color, $amount: 0.4);
+                    text-align: left;
+                    &.active {
+                        color: $font-color;
+                    }
+                    span {
+                        font-size: 1.1em;
+                        margin-left: 1em;
+                    }
+                    svg {font-size: 1.5em;}
+                }
+            }
+        }
+    }
+    @media (max-width: 991px){
+        .box-2 {
+            box-shadow: none;
+            border-radius: unset;
+        }
     }
 }
 
