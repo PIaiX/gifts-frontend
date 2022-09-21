@@ -1923,6 +1923,20 @@ figure.product-card.mini img {
 .account .address button:active, .account .address a:active {
   color: #2D9CDB;
 }
+.account .order {
+  border: 2px solid #FFE8E8;
+  background-color: #fff;
+}
+.account .order .title {
+  background-color: #FFE8E8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+.account .order .main {
+  padding: 1em;
+}
 footer {
   height: 500px;
   background-color: #262D33;
