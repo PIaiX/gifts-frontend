@@ -1,27 +1,21 @@
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { VscArrowLeft } from "react-icons/vsc";
 
 export default function UserProfile() {
     return (
-        <Row>
-            <Col xl={7}>
-                <div className='box-2 p-lg-4'>
-                    <div className='d-flex align-items-center d-lg-none mb-3 mb-sm-4'>
-                        <Link to="/account" className="btn-4 fs-11 px-2 px-sm-3">
-                            <VscArrowLeft className='fs-12'/>
-                        </Link>
-                        <h1 className='inner mb-0 ms-2 ms-sm-4'>Личные данные</h1>
-                    </div>
-                    
-                    
-                </div>
-            </Col>
-            <Col className='d-none d-xl-block' xl={5}>
-                <aside className='mb-4'></aside>
-                <aside className='mb-4'></aside>
-            </Col>
-        </Row>
+        <div className='box p-5'>
+            <h1>Контактная информация</h1>
+            <ul className='list-unstyled fs-12 mb-4'>
+                <li className='mb-3'>Анастасия Иванова</li>
+                <li className='mb-3'><a href="tel:+79378456123">+79378456123</a></li>
+                <li className='mb-3'><a href="mailto:natya@gmail.com">natya@gmail.com</a></li>
+                <li className='mb-3'>Казань</li>
+            </ul>
+            
+            <div className='d-flex align-items-center'>
+                <Link to="edit" className='btn-1'>Редактировать</Link>
+                <Link to="password" className='btn-1 ms-4'>Изменить пароль</Link>
+            </div>
+        </div>
     )
 }

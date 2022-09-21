@@ -1904,13 +1904,25 @@ figure.product-card.mini img {
 .account-nav ul li a svg, .account-nav ul li button svg {
   font-size: 1.5em;
 }
-@media (max-width: 991px) {
-  .account .box-2 {
-    box-shadow: none;
-    border-radius: unset;
-  }
+.account .address {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 2em;
+  border-radius: 2.5em;
 }
-
+.account .address button, .account .address a {
+  font-size: 1.5em;
+  color: #9D9D9D;
+  transition: 0.3s ease;
+}
+.account .address button:hover, .account .address button:focus, .account .address a:hover, .account .address a:focus {
+  color: #DD4141;
+}
+.account .address button:active, .account .address a:active {
+  color: #2D9CDB;
+}
 footer {
   height: 500px;
   background-color: #262D33;
