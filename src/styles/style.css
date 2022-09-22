@@ -18,7 +18,7 @@ input, textarea {
   box-shadow: 0px 0px 8px rgba(45, 45, 45, 0.12);
   border: none;
   border-radius: 2.5em;
-  padding: 0.75em 1.5em;
+  padding: 1em 1.5em;
   width: 100%;
   line-height: normal;
   outline: none;
@@ -94,6 +94,44 @@ label {
 label span {
   flex: 1;
   margin-left: 0.6em;
+}
+
+.input-file {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  border-radius: 2.5em;
+  transition: 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0px 0px 8px rgba(45, 45, 45, 0.12);
+  padding: 1em 1.5em;
+}
+.input-file:hover {
+  background-color: #FFE8E8;
+}
+.input-file input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  top: 0px;
+  left: 0px;
+  padding: 0px;
+}
+.input-file svg {
+  color: #DD4141;
+  height: 2em;
+  width: 2em;
+}
+.input-file .ind {
+  color: #DD4141;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.input-file .ind:empty {
+  display: none;
 }
 
 .password {
@@ -1926,6 +1964,7 @@ figure.product-card.mini img {
 .account .order {
   border: 2px solid #FFE8E8;
   background-color: #fff;
+  margin-top: 0.5em;
 }
 .account .order .title {
   background-color: #FFE8E8;
@@ -1933,9 +1972,74 @@ figure.product-card.mini img {
   justify-content: space-between;
   align-items: center;
   padding: 1em;
+  cursor: pointer;
 }
 .account .order .main {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.account .order .main.full {
+  max-height: 330px;
+}
+.account .order .main .item {
   padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account .order .main .item:not(:first-child) {
+  border-top: 2px solid #FFE8E8;
+}
+.account .order .main .item .product {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.account .order .main .item .count {
+  width: 80px;
+  text-align: right;
+}
+.account .order .main .item .price {
+  width: 100px;
+  text-align: right;
+}
+.account .bonus-card {
+  width: 100%;
+  position: relative;
+  border-radius: 2.5em;
+  overflow: hidden;
+}
+.account .bonus-card img {
+  width: 100%;
+  height: 215px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.account .bonus-card figcaption {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.8em;
+}
+.account .bonus-card figcaption .num {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 100%;
+}
+.account .bonus-card figcaption .text {
+  font-weight: 600;
 }
 footer {
   height: 500px;

@@ -26,20 +26,20 @@ export default function AccountMenu() {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='history'>
+                    <NavLink to='bonus'>
                         <FiCreditCard/>
                         <span>Баллы</span>
                     </NavLink>
                 </li>
                 <hr/>
                 <li>
-                    <NavLink to='history'>
+                    <NavLink to='notifications'>
                         <FiBell/>
                         <span>Уведомления</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='history'>
+                    <NavLink to='support'>
                         <FiHelpCircle/>
                         <span>Служба поддержки</span>
                     </NavLink>
