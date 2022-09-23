@@ -1125,7 +1125,8 @@ nav.categories ul li {
     width: 33.3333333333%;
   }
 }
-nav.categories ul li figure img {
+
+.subcategory-card img {
   width: 100%;
   height: 180px;
   -o-object-fit: cover;
@@ -1133,16 +1134,16 @@ nav.categories ul li figure img {
   border-radius: 2.5em;
 }
 @media (max-width: 1199px) {
-  nav.categories ul li figure img {
+  .subcategory-card img {
     height: 160px;
   }
 }
 @media (max-width: 575px) {
-  nav.categories ul li figure img {
+  .subcategory-card img {
     height: 25vw;
   }
 }
-nav.categories ul li figure figcaption h3 {
+.subcategory-card figcaption h3 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

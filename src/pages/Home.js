@@ -11,6 +11,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 import CategoryCard from '../components/CategoryCard';
+import SubCategoryCard from '../components/SubCategoryCard';
 import ArticlePreview from '../components/ArticlePreview';
 
 import { BiChevronRight } from "react-icons/bi";
@@ -346,36 +347,28 @@ function Home() {
                             </form>
 
                             <div className='d-none d-xl-block position-relative'>
+                                <Link to="/" className='fw-6'>
+                                    <span>Смотреть все</span>
+                                    <BiChevronRight className='fs-12'/>
+                                </Link>
                                 <Swiper
                                     className='position-static py-3'
                                     modules={[Navigation]}
-                                    spaceBetween={16}
+                                    spaceBetween={30}
                                     slidesPerView={3}
                                     navigation={true}
                                 >
                                     <SwiperSlide>
-                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product2.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                        <SubCategoryCard title={'Шары ко дню рождения'} imgUrl={'imgs/product2.jpg'}/>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product2.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
+                                        <SubCategoryCard title={'Шары в виде животных'} imgUrl={'imgs/product2.jpg'}/>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product2.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
+                                        <SubCategoryCard title={'Шары ко дню рождения'} imgUrl={'imgs/product2.jpg'}/>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.6} reviewsCount={'110'}/>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={2.8} reviewsCount={'110'}/>
+                                        <SubCategoryCard title={'Шары в виде животных'} imgUrl={'imgs/product2.jpg'}/>
                                     </SwiperSlide>
                                 </Swiper>
                             </div>
