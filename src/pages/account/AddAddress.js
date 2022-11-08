@@ -10,6 +10,8 @@ export default function AddAddress() {
             <Row>
                 <Col md={7}>
                     <form className='fs-12'>
+                        <label className='mb-2'>Название</label>
+                        <input className='mb-4' type='text' placeholder='Название'/>
                         <label className='mb-2'>Ваш город <span className='main-color'>*</span></label>
                         <input className='mb-4' type='text' placeholder='Город'/>
                         <label className='mb-2'>Улица <span className='main-color'>*</span></label>

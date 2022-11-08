@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FiTrash2, FiEdit3 } from "react-icons/fi";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Address from '../../components/Address'
 
 export default function Addresses() {
     return (
@@ -9,38 +9,11 @@ export default function Addresses() {
                 <h1 className='mb-0'>Адреса доставки</h1>
                 <Link to='add' className='btn-1'>Добавить адрес</Link>
             </div>
-            
-            <div className='address mt-4'>
-                <div className='flex-1'>
-                    <h6 className='mb-1'>Адрес 1</h6>
-                    <p>г. Казань, ул. Фучика, д.54, кв.1</p>
-                </div>
-                <Link to='edit'><FiEdit3/></Link>
-                <button type='button' className='ms-4'><FiTrash2/></button>
-            </div>
-            <div className='address mt-4'>
-                <div className='flex-1'>
-                    <h6 className='mb-1'>Адрес 1</h6>
-                    <p>г. Казань, ул. Фучика, д.54, кв.1</p>
-                </div>
-                <button type='button'><FiEdit3/></button>
-                <button type='button' className='ms-4'><FiTrash2/></button>
-            </div>
-            <div className='address mt-4'>
-                <div className='flex-1'>
-                    <h6 className='mb-1'>Адрес 1</h6>
-                    <p>г. Казань, ул. Фучика, д.54, кв.1</p>
-                </div>
-                <button type='button'><FiEdit3/></button>
-                <button type='button' className='ms-4'><FiTrash2/></button>
-            </div>
-            <div className='address mt-4'>
-                <div className='flex-1'>
-                    <h6 className='mb-1'>Адрес 1</h6>
-                    <p>г. Казань, ул. Фучика, д.54, кв.1</p>
-                </div>
-                <button type='button'><FiEdit3/></button>
-                <button type='button' className='ms-4'><FiTrash2/></button>
+            <div className='addresses-box'>
+                <Address title='Адрес 1' address='г. Казань, ул. Фучика, д.54, кв.1' />
+                <Address title='Адрес 2' address='г. Казань, ул. Фучика, д.54, кв.1' />
+                <Address title='Адрес 3' address='г. Казань, ул. Фучика, д.54, кв.1' />
+                <Address title='Адрес 4' address='г. Казань, ул. Фучика, д.54, кв.1' />
             </div>
         </div>
     )

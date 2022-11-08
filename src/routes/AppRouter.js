@@ -3,6 +3,7 @@ import { useRoutes, useLocation } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import Layout from '../components/Layout';
 import Home from '../pages/Home';
+import Balloons from '../pages/Balloons';
 import Delivery from '../pages/Delivery';
 import Returns from '../pages/Returns';
 import Contacts from '../pages/Contacts';
@@ -32,7 +33,7 @@ export const routeList = [
         {path: 'catalog', element: <Catalog/>, breadcrumb: 'Каталог'},
         {path: 'catalog/category', element: <Category/>, breadcrumb: 'Категория'},
         {path: 'catalog/category/product', element: <Product/>, breadcrumb: 'Товар'},
-        {path: 'balloons', element: <Home/>, breadcrumb: 'Шары'},
+        {path: 'balloons', element: <Balloons/>, breadcrumb: 'Шары'},
         {path: 'cart', element: <ShoppingCart/>, breadcrumb: 'Корзина'},
         {path: 'cart/checkout', element: <Checkout/>, breadcrumb: 'Оформление заказа'},
         {path: 'registration', element: <Registration/> , breadcrumb: 'Регистрация'},

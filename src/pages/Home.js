@@ -1,23 +1,23 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, FreeMode  } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination, FreeMode  } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/free-mode'
+import 'swiper/css/pagination'
 
-import CategoryCard from '../components/CategoryCard';
-import SubCategoryCard from '../components/SubCategoryCard';
-import ArticlePreview from '../components/ArticlePreview';
+import CategoryCard from '../components/CategoryCard'
+import SubCategoryCard from '../components/SubCategoryCard'
+import ArticlePreview from '../components/ArticlePreview'
+import ProductCard from '../components/ProductCard'
+import PopularProductsSlider from '../components/PopularProductsSlider'
 
-import { BiChevronRight } from "react-icons/bi";
-import ProductCard from '../components/ProductCard';
-import PopularProductsSlider from '../components/PopularProductsSlider';
-
+import { BiChevronRight } from "react-icons/bi"
 
 function Home() {
     return (
@@ -347,7 +347,7 @@ function Home() {
                             </form>
 
                             <div className='d-none d-xl-block position-relative'>
-                                <Link to="/" className='fw-6'>
+                                <Link to="/balloons" className='fw-6'>
                                     <span>Смотреть все</span>
                                     <BiChevronRight className='fs-12'/>
                                 </Link>

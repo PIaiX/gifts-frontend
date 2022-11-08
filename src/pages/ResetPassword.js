@@ -29,7 +29,7 @@ export default function ResetPassword(props) {
                                     <label className='fs-13 mb-2 mb-sm-3'>Код подтверждения</label>
                                     <div className='form-group'>
                                         <input type='text' placeholder='Введите код подтверждения' className='py-3 px-4'/>
-                                        <button type='button' className='btn-1' onClick={()=>setStep('3')}>Получить код</button>
+                                        <button type='button' className='btn-1' onClick={()=>setStep('3')}>Отправить</button>
                                     </div>
                                 </form>
                             }
