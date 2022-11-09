@@ -96,6 +96,89 @@ label span {
   margin-left: 0.6em;
 }
 
+.simple-select-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 150px;
+  max-width: 100%;
+}
+@media (max-width: 575px) {
+  .simple-select-container {
+    min-width: unset;
+  }
+}
+.simple-select__control {
+  border-radius: 0px !important;
+  border: none !important;
+  border-bottom: 1px solid transparent !important;
+  background-color: #fff !important;
+  transition: 0.3s ease !important;
+  min-height: unset !important;
+}
+.simple-select__control--is-focused {
+  border: none !important;
+  border-bottom: 1px solid #DD4141 !important;
+  box-shadow: none !important;
+}
+.simple-select__value-container {
+  padding: 0px !important;
+}
+.simple-select__single-value {
+  color: #000 !important;
+  cursor: pointer;
+}
+.simple-select__indicator {
+  color: #9D9D9D !important;
+  transition: 0.3s ease !important;
+  cursor: pointer;
+  padding: 0px !important;
+  width: 1.25em;
+  height: 1.25em;
+}
+.simple-select__indicator:hover {
+  color: #DD4141 !important;
+}
+.simple-select__indicator svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+.simple-select__indicator-separator {
+  display: none;
+}
+.simple-select__input-container {
+  margin: 0px !important;
+  padding: 0px !important;
+  cursor: text;
+}
+.simple-select__menu {
+  margin-top: 0px !important;
+  top: 100% !important;
+  font-size: 0.9em;
+  min-width: 150px;
+  background-color: #fff !important;
+  border: 1px solid #9D9D9D !important;
+  border-radius: 0px 0px 10px 10px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+.simple-select__option {
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+.simple-select__option:hover, .simple-select__option:focus, .simple-select__option:active, .simple-select__option--is-focused {
+  background-color: #9D9D9D !important;
+  color: #fff;
+  cursor: pointer;
+}
+.simple-select__option--is-selected {
+  background-color: #DD4141 !important;
+  color: #fff;
+}
+
 .input-file {
   display: flex;
   align-items: center;
@@ -214,16 +297,9 @@ button {
 .btn-fav {
   background-color: #fff;
   border-radius: 50%;
-  color: #7E7E7E;
   font-size: 1.75em;
-  width: 1.65em;
-  height: 1.65em;
-}
-.btn-fav[data-checked=true] {
-  color: #DD4141;
-}
-.btn-fav svg {
-  stroke-width: 2.5px;
+  width: 1.75em;
+  height: 1.75em;
 }
 .btn-del {
   color: #7E7E7E;
@@ -534,9 +610,9 @@ h6 {
 .breadcrumbs ul {
   list-style: none;
   padding-left: 0px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 300;
-  color: rgba(24, 24, 24, 0.5);
+  color: #9D9D9D;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -700,14 +776,9 @@ body {
     font-size: 14px;
   }
 }
-@media (max-width: 767px) {
-  body {
-    font-size: 12px;
-  }
-}
 @media (max-width: 575px) {
   body {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -826,13 +897,13 @@ header nav.menu2 {
     margin-left: 1em;
   }
 }
+@media (max-width: 575px) {
+  header nav.menu2 {
+    margin-left: 0;
+  }
+}
 header nav.menu2 li:not(:first-child) {
   margin-left: 2em;
-}
-@media (max-width: 1199px) {
-  header nav.menu2 li:not(:first-child) {
-    margin-left: 1em;
-  }
 }
 header nav.menu2 button, header nav.menu2 a {
   display: flex;
@@ -844,7 +915,7 @@ header nav.menu2 button, header nav.menu2 a {
 header nav.menu2 button:hover, header nav.menu2 button:focus, header nav.menu2 a:hover, header nav.menu2 a:focus {
   opacity: 1;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1399px) and (min-width: 768px) {
   header nav.menu2 button, header nav.menu2 a {
     font-size: 0.8em;
   }
@@ -1261,6 +1332,11 @@ figure.product-card-horizontal del {
     font-size: 0.8em;
   }
 }
+@media (max-width: 767px) {
+  figure.product-card {
+    font-size: 0.9em;
+  }
+}
 figure.product-card:hover {
   background-color: rgba(24, 24, 24, 0.04);
   box-shadow: 0px 0px 8px rgba(45, 45, 45, 0.12);
@@ -1333,6 +1409,11 @@ figure.product-card button {
 }
 figure.product-card.mini {
   font-size: 0.8em;
+}
+@media (max-width: 767px) {
+  figure.product-card.mini {
+    font-size: 0.9em;
+  }
 }
 figure.product-card.mini img {
   height: 210px;

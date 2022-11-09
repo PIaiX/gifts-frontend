@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
-import Breadcrumbs from '../components/utils/Breadcrumbs';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Filter from '../components/Filter';
-import ProductCard from '../components/ProductCard';
-import PopularProductsSlider from '../components/PopularProductsSlider';
-import NavPagination from '../components/NavPagination';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { FiX } from "react-icons/fi";
+import React, { useState } from 'react'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Offcanvas from 'react-bootstrap/Offcanvas'
+
+import Breadcrumbs from '../components/utils/Breadcrumbs'
+import Filter from '../components/Filter'
+import ProductCard from '../components/ProductCard'
+import PopularProductsSlider from '../components/PopularProductsSlider'
+import NavPagination from '../components/NavPagination'
+
+import { FiX, FiSliders } from "react-icons/fi"
+
+import Select from 'react-select'
+const optionsSort = [
+    { value: '1', label: 'Популярные' },
+    { value: '2', label: 'Сначала дешевле' },
+    { value: '3', label: 'Сначала дороже' },
+]
+const optionsAmount = [
+    { value: '1', label: 'Показывать по 12' },
+    { value: '2', label: 'Показывать по 24' },
+    { value: '3', label: 'Показывать по 36' },
+]
 
 export default function Category(props) {
     const [show, setShow] = useState(false);
@@ -29,19 +43,14 @@ export default function Category(props) {
                         </Col>
                         <Col xs={12} lg={9}>
                             <div className='d-flex justify-content-between align-items-center'>
-                                <button type='button' onClick={handleShow} className='d-lg-none fs-12 fw-6'>Фильтры</button>
+                                <button type='button' onClick={handleShow} className='d-lg-none fs-12 fw-6'>
+                                    <FiSliders className='fs-12'/>
+                                    <span className='d-none d-sm-inline ms-2'>Фильтры</span>
+                                </button>
                                 <div className='d-none d-lg-block fs-12 fw-6'>Сортировка:</div>
                                 <div className='d-flex justify-content-between align-items-center'>
-                                    <select>
-                                        <option>Популярные</option>
-                                        <option>Сначала дешевле</option>
-                                        <option>Сначала дороже</option>
-                                    </select>
-                                    <select className='ms-4'>
-                                        <option>Показывать по 12</option>
-                                        <option>Показывать по 24</option>
-                                        <option>Показывать по 36</option>
-                                    </select>
+                                    <Select name="sort" placeholder='Выбрать' classNamePrefix="simple-select" className='simple-select-container' options={optionsSort} value={optionsSort[0]} isClearable={false} isSearchable={true} />
+                                    <Select name="sort" placeholder='Выбрать' classNamePrefix="simple-select" className='simple-select-container ms-4' options={optionsAmount} value={optionsAmount[0]} isClearable={false} isSearchable={true} />
                                 </div>
                             </div>
                             <hr/>

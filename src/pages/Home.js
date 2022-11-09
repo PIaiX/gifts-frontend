@@ -85,8 +85,8 @@ function Home() {
                 <section className='mb-8'>
                     <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Популярные категории</h2>
-                        <Link to="/" className='fw-6'>
-                            <span>Смотреть все</span>
+                        <Link to="/" className='fw-6 d-flex align-items-center'>
+                            <span>Смотреть&nbsp;все</span>
                             <BiChevronRight className='fs-12'/>
                         </Link>
                     </div>
@@ -126,8 +126,8 @@ function Home() {
                 <Container>
                     <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Лучшие предложения</h2>
-                        <Link to="/" className='fw-6'>
-                            <span>Смотреть все</span>
+                        <Link to="/" className='fw-6 d-flex align-items-center'>
+                            <span>Смотреть&nbsp;все</span>
                             <BiChevronRight className='fs-12'/>
                         </Link>
                     </div>
@@ -190,8 +190,8 @@ function Home() {
                 <section className='mb-8'>
                     <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Наборы</h2>
-                        <Link to="/" className='fw-6'>
-                            <span>Смотреть все</span>
+                        <Link to="/" className='fw-6 d-flex align-items-center'>
+                            <span>Смотреть&nbsp;все</span>
                             <BiChevronRight className='fs-12'/>
                         </Link>
                     </div>
@@ -252,8 +252,8 @@ function Home() {
                 <section className='mb-8'>
                     <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Новости</h2>
-                        <Link to="/" className='fw-6'>
-                            <span>Смотреть все</span>
+                        <Link to="/" className='fw-6 d-flex align-items-center'>
+                            <span>Смотреть&nbsp;все</span>
                             <BiChevronRight className='fs-12'/>
                         </Link>
                     </div>

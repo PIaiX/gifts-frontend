@@ -91,7 +91,7 @@ export default function Product(props) {
                                     <span className='gray ms-2'>(110 отзывов)</span>
                                 </div>
                                 <div className='d-flex align-items-center justify-content-between'>
-                                    <BtnShare />
+                                    <BtnShare className='me-2' />
                                     <BtnFav check={false}/>
                                 </div>
                             </div>

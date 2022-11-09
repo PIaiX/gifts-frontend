@@ -20,7 +20,7 @@ export default function ProductCard(props) {
                 </div>
                 <div className='d-flex'>
                     <button type='button' className='btn-1 flex-1'>В корзину</button>
-                    <BtnFav check={false} className='ms-3'/>
+                    <BtnFav check={false} className='ms-2 ms-sm-3'/>
                 </div>
             </figcaption>
         </figure>

@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
-import Breadcrumbs from '../components/utils/Breadcrumbs';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Filter from '../components/Filter';
-import ProductCard from '../components/ProductCard';
-import PopularProductsSlider from '../components/PopularProductsSlider';
-import NavPagination from '../components/NavPagination';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { FiX, FiTrash2, FiHeart } from "react-icons/fi";
+import React, { useState } from 'react'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Offcanvas from 'react-bootstrap/Offcanvas'
+
+import Breadcrumbs from '../components/utils/Breadcrumbs'
+import Filter from '../components/Filter'
+import ProductCard from '../components/ProductCard'
+import PopularProductsSlider from '../components/PopularProductsSlider'
+import NavPagination from '../components/NavPagination'
+
+import { FiX, FiTrash2, FiHeart } from "react-icons/fi"
+
+import Select from 'react-select'
+const optionsSort = [
+    { value: '1', label: 'Популярные' },
+    { value: '2', label: 'Сначала дешевле' },
+    { value: '3', label: 'Сначала дороже' },
+]
 
 export default function Favorites(props) {
     const [show, setShow] = useState(false);
@@ -36,11 +45,7 @@ export default function Favorites(props) {
                         <Col xs={12} lg={9}>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <button type='button' onClick={handleShow} className='d-lg-none fs-12 fw-6'>Фильтры</button>
-                                <select className='d-none d-sm-block fs-11'>
-                                    <option>Популярные</option>
-                                    <option>Сначала дешевле</option>
-                                    <option>Сначала дороже</option>
-                                </select>
+                                <Select name="sort" placeholder='Выбрать' classNamePrefix="simple-select" className='simple-select-container d-none d-sm-block fs-11' options={optionsSort} value={optionsSort[0]} isClearable={false} isSearchable={true} />
                                 <button type='button' className='gray fs-11'>
                                     <span>Удалить всё</span>
                                     <FiTrash2 className='fs-15 ms-2'/>
