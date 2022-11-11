@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 export default function EditAddress() {
     return (
-        <div className='box p-5'>
+        <div className='box p-4 p-xl-5'>
             <h1>Редактировать адрес</h1>
             <Row>
                 <Col md={7}>
@@ -24,7 +24,7 @@ export default function EditAddress() {
                         <input className='mb-4' type='number' placeholder='0'/>
                         <label className='mb-2'>Этаж</label>
                         <input className='mb-4' type='number' placeholder='0'/>
-                        <Row md={2}>
+                        <Row md={2} className='gy-3'>
                             <Col>
                                 <button type='submit' className='btn-1 w-100'>Сохранить</button>
                             </Col>

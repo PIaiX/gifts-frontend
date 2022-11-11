@@ -1,10 +1,15 @@
-import React from 'react';
-import Table from 'react-bootstrap/Table';
+import React from 'react'
+import Table from 'react-bootstrap/Table'
+import { Link } from 'react-router-dom'
+import { FiArrowLeft } from "react-icons/fi"
 
 export default function Notifications(props) {
     return (
-        <div className='box p-5'>
-            <h1>Уведомления</h1>
+        <div className='box p-4 p-xl-5'>
+            <div className='d-flex align-items-center mb-4'>
+                <Link to='/account' className='d-lg-none fs-15 me-4'><FiArrowLeft/></Link>
+                <h1 className='mb-0'>Уведомления</h1>
+            </div>
             <Table striped bordered>
                 <thead>
                     <tr>

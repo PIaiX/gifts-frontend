@@ -5,10 +5,10 @@ import Col from 'react-bootstrap/Col';
 
 export default function AddAddress() {
     return (
-        <div className='box p-5'>
+        <div className='box p-4 p-xl-5'>
             <h1>Добавить адрес</h1>
             <Row>
-                <Col md={7}>
+                <Col xs={12} xl={9} xxl={7}>
                     <form className='fs-12'>
                         <label className='mb-2'>Название</label>
                         <input className='mb-4' type='text' placeholder='Название'/>
@@ -24,7 +24,7 @@ export default function AddAddress() {
                         <input className='mb-4' type='number' placeholder='0'/>
                         <label className='mb-2'>Этаж</label>
                         <input className='mb-4' type='number' placeholder='0'/>
-                        <Row md={2}>
+                        <Row md={2} className='gy-3'>
                             <Col>
                                 <button type='submit' className='btn-1 w-100'>Сохранить</button>
                             </Col>

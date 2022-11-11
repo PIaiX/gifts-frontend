@@ -5,8 +5,8 @@ import Table from 'react-bootstrap/Table';
 import BonusHistory from '../../components/BonusHistory';
 import NavPagination from '../../components/NavPagination';
 import Modal from 'react-bootstrap/Modal';
-import { FiXCircle } from "react-icons/fi";
-
+import { FiXCircle, FiArrowLeft } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 export default function BonusCard(props) {
     const [show, setShow] = useState(false);
@@ -15,11 +15,24 @@ export default function BonusCard(props) {
     const handleShow = () => setShow(true);
 
     return (
-        <div className='box p-5'>
-            <h1>Баллы</h1>
-            <Row>
+        <div className='box p-4 p-xl-5'>
+            <div className='d-flex align-items-center mb-4'>
+                <Link to='/account' className='d-lg-none fs-15 me-4'><FiArrowLeft/></Link>
+                <h1 className='mb-0'>Баллы</h1>
+            </div>
+            
+            <Row className='flex-md-row-reverse'>
+                <Col md={5} className='mb-4 mb-md-0'>
+                    <figure className='bonus-card'>
+                        <img src='imgs/bonus-card.svg' alt='bonus-card'/>
+                        <figcaption>
+                            <div className='num'>0</div>
+                            <div className='text'>БАЛЛОВ</div>
+                        </figcaption>
+                    </figure>
+                </Col>
                 <Col md={7}>
-                    <h3 className='text-start mb-4'>Данные карты</h3>
+                    <h3 className='text-start mb-3 mb-xxl-4'>Данные карты</h3>
                     <Table borderless>
                         <tbody>
                             <tr>
@@ -32,9 +45,9 @@ export default function BonusCard(props) {
                             </tr>
                         </tbody>
                     </Table>
-                    <button type="button" onClick={handleShow} className='btn-1 w-100 mt-4'>Показать QR-код</button>
+                    <button type="button" onClick={handleShow} className='btn-1 w-100 mt-3 mt-xxl-4'>Показать QR-код</button>
                     <Modal show={show} onHide={handleClose}>
-                        <button type="button" className='btn-close'>
+                        <button type="button" className='btn-close' onClick={handleClose}>
                             <FiXCircle />
                         </button>
                         <Modal.Body>
@@ -48,15 +61,6 @@ export default function BonusCard(props) {
                             <button className='btn-1 px-5 mx-auto mt-4' onClick={handleClose}>Назад</button>
                         </Modal.Body>
                     </Modal>
-                </Col>
-                <Col md={5}>
-                    <figure className='bonus-card'>
-                        <img src='imgs/bonus-card.svg' alt='bonus-card'/>
-                        <figcaption>
-                            <div className='num'>0</div>
-                            <div className='text'>БАЛЛОВ</div>
-                        </figcaption>
-                    </figure>
                 </Col>
             </Row>
 
