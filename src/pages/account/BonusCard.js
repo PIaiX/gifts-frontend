@@ -8,9 +8,8 @@ import Modal from 'react-bootstrap/Modal';
 import { FiXCircle, FiArrowLeft } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
-export default function BonusCard(props) {
+export default function BonusCard() {
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -23,7 +22,7 @@ export default function BonusCard(props) {
             
             <Row className='flex-md-row-reverse'>
                 <Col md={5} className='mb-4 mb-md-0'>
-                    <figure className='bonus-card'>
+                    <figure className='bonus-card mini'>
                         <img src='imgs/bonus-card.svg' alt='bonus-card'/>
                         <figcaption>
                             <div className='num'>0</div>
