@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gifts-react/static/css/main.e00253ac.css",
-    "main.js": "/gifts-react/static/js/main.aee8415c.js",
+    "main.css": "/gifts-react/static/css/main.d31809fd.css",
+    "main.js": "/gifts-react/static/js/main.8d37f411.js",
     "static/media/horizontal.jpg": "/gifts-react/static/media/horizontal.9ace9c0c111901736f9a.jpg",
     "static/media/Mont-ThinItalic.eot": "/gifts-react/static/media/Mont-ThinItalic.5510e8d36aaaf841911a.eot",
     "static/media/Mont-ExtraLightItalic.eot": "/gifts-react/static/media/Mont-ExtraLightItalic.0329ea9a75589c1375c9.eot",
@@ -81,11 +81,11 @@
     "static/media/down.svg": "/gifts-react/static/media/down.5ca893b225197572b1dd.svg",
     "static/media/plus.svg": "/gifts-react/static/media/plus.4e9231fd83a723c64a1f.svg",
     "static/media/mark.svg": "/gifts-react/static/media/mark.76cd1c33be8fe4c57a8b.svg",
-    "main.e00253ac.css.map": "/gifts-react/static/css/main.e00253ac.css.map",
-    "main.aee8415c.js.map": "/gifts-react/static/js/main.aee8415c.js.map"
+    "main.d31809fd.css.map": "/gifts-react/static/css/main.d31809fd.css.map",
+    "main.8d37f411.js.map": "/gifts-react/static/js/main.8d37f411.js.map"
   },
   "entrypoints": [
-    "static/css/main.e00253ac.css",
-    "static/js/main.aee8415c.js"
+    "static/css/main.d31809fd.css",
+    "static/js/main.8d37f411.js"
   ]
 }
