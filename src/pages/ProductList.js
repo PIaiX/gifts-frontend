@@ -9,7 +9,6 @@ import Filter from '../components/Filter'
 import ProductCard from '../components/ProductCard'
 import PopularProductsSlider from '../components/PopularProductsSlider'
 import NavPagination from '../components/NavPagination'
-import SubCategoryCard from '../components/SubCategoryCard'
 
 import { FiX, FiSliders } from "react-icons/fi"
 
@@ -25,7 +24,7 @@ const optionsAmount = [
     { value: '3', label: 'Показывать по 36' },
 ]
 
-export default function Category(props) {
+export default function ProductList(props) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -36,41 +35,7 @@ export default function Category(props) {
                 <Breadcrumbs/>
 
                 <section className='mb-8'>
-                    <h1>Подарки на 23 февраля</h1>
-                    <nav className='categories'>
-                        <ul>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Аксессуары для мужчины и ...'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                            <li>
-                                <SubCategoryCard title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} imgUrl={'imgs/product.jpg'}/>
-                            </li>
-                        </ul>
-                    </nav>
+                    <h1>Аксессуары для мужчины и подростка </h1>
 
                     <Row>
                         <Col lg={3} className='d-none d-lg-block'>
@@ -78,11 +43,10 @@ export default function Category(props) {
                         </Col>
                         <Col xs={12} lg={9}>
                             <div className='d-flex justify-content-between align-items-center'>
-                                <button type='button' onClick={handleShow} className='d-flex d-lg-none align-items-center fs-12 fw-6'>
+                                <button type='button' onClick={handleShow} className='d-lg-none fs-12 fw-6'>
                                     <FiSliders className='fs-12'/>
                                     <span className='d-none d-sm-inline ms-2'>Фильтры</span>
                                 </button>
-
                                 <div className='d-none d-lg-block fs-12 fw-6'>Сортировка:</div>
                                 <div className='d-flex justify-content-between align-items-center'>
                                     <Select name="sort" placeholder='Выбрать' classNamePrefix="simple-select" className='simple-select-container' options={optionsSort} value={optionsSort[0]} isClearable={false} isSearchable={true} />
@@ -137,7 +101,7 @@ export default function Category(props) {
                 <PopularProductsSlider/>
             </Container>
         </main>
-
+        
         <Offcanvas show={show} onHide={handleClose}>
             <Offcanvas.Body>
                 <button type='button' className='close' onClick={handleClose}>

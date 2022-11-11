@@ -10,6 +10,7 @@ import Contacts from '../pages/Contacts';
 import About from '../pages/About';
 import Catalog from '../pages/Catalog';
 import Category from '../pages/Category';
+import ProductList from '../pages/ProductList';
 import Product from '../pages/Product';
 import ShoppingCart from '../pages/ShoppingCart';
 import Checkout from '../pages/Checkout';
@@ -32,7 +33,8 @@ export const routeList = [
         {path: 'favorites', element: <Favorites/>, breadcrumb: 'Избранное'},
         {path: 'catalog', element: <Catalog/>, breadcrumb: 'Каталог'},
         {path: 'catalog/category', element: <Category/>, breadcrumb: 'Категория'},
-        {path: 'catalog/category/product', element: <Product/>, breadcrumb: 'Товар'},
+        {path: 'catalog/category/list', element: <ProductList/>, breadcrumb: 'Список товаров'},
+        {path: 'catalog/category/list/product', element: <Product/>, breadcrumb: 'Товар'},
         {path: 'balloons', element: <Balloons/>, breadcrumb: 'Шары'},
         {path: 'cart', element: <ShoppingCart/>, breadcrumb: 'Корзина'},
         {path: 'cart/checkout', element: <Checkout/>, breadcrumb: 'Оформление заказа'},

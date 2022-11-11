@@ -934,6 +934,7 @@ aside {
 
 
 figure.category-card {
+    position: relative;
     img {
         width: 100%;
         height: 380px;
@@ -1531,7 +1532,7 @@ figure.product-card {
 
 .balloons {
     background-image: $gradient;
-    background-color: rgb(255 255 255 / 90%);
+    background-color: rgba(255, 255, 255, .9);
     background-size: cover;
     background-blend-mode: overlay;
     padding: 3em 0;
