@@ -483,6 +483,74 @@ form.filter fieldset .content[data-state="hidden"] {
   max-height: 0px;
 }
 
+form.mobile-filter {
+  display: block;
+}
+
+form.mobile-filter fieldset {
+  margin-bottom: 1.5em;
+}
+
+form.mobile-filter fieldset legend {
+  margin-bottom: .5em;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form.mobile-filter fieldset legend span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+form.mobile-filter fieldset legend button {
+  font-size: .9em;
+}
+
+form.mobile-filter fieldset .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+form.mobile-filter fieldset .tags label {
+  margin-bottom: .5em;
+}
+
+form.mobile-filter fieldset .tags label:not(:last-child) {
+  margin-right: .5em;
+}
+
+form.mobile-filter fieldset .tags label span {
+  background-color: #f3f3f3;
+  color: #000;
+  margin-left: 0px;
+  padding: 0.5em;
+  border-radius: 0.75em;
+  font-size: .9em;
+}
+
+form.mobile-filter fieldset .tags label input {
+  display: none;
+}
+
+form.mobile-filter fieldset .tags label input:checked + span {
+  background-color: #DD4141;
+  color: #fff;
+}
+
 /* Text styles */
 h1, h2 {
   text-align: left;

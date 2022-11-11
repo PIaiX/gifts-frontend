@@ -6,6 +6,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 
 import Breadcrumbs from '../components/utils/Breadcrumbs'
 import Filter from '../components/Filter'
+import MobileFilter from '../components/MobileFilter'
 import ProductCard from '../components/ProductCard'
 import PopularProductsSlider from '../components/PopularProductsSlider'
 import NavPagination from '../components/NavPagination'
@@ -107,7 +108,7 @@ export default function ProductList(props) {
                 <button type='button' className='close' onClick={handleClose}>
                     <FiX/>
                 </button>
-                <Filter />
+                <MobileFilter />
             </Offcanvas.Body>
         </Offcanvas>
         </>
