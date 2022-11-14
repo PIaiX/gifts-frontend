@@ -83,7 +83,7 @@ function Header(props) {
                         <li><NavLink to='/about'>О компании</NavLink></li>
                         <li><NavLink to='/delivery'>Доставка и оплата</NavLink></li>
                         <li><NavLink to='/returns'>Возврат</NavLink></li>
-                        <li><NavLink to='/'>Новости</NavLink></li>
+                        <li><NavLink to='/news'>Новости</NavLink></li>
                         <li><NavLink to='/contacts'>Контакты</NavLink></li>
                     </ul>
                 </nav>
@@ -110,7 +110,7 @@ function Header(props) {
                         <li><NavLink to='/about'>О компании</NavLink></li>
                         <li><NavLink to='/delivery'>Доставка и оплата</NavLink></li>
                         <li><NavLink to='/returns'>Возврат</NavLink></li>
-                        <li><NavLink to='/'>Новости</NavLink></li>
+                        <li><NavLink to='/news'>Новости</NavLink></li>
                         <li><NavLink to='/contacts'>Контакты</NavLink></li>
                     </ul>
                 </nav>

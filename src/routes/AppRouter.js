@@ -7,6 +7,7 @@ import Balloons from '../pages/Balloons';
 import Delivery from '../pages/Delivery';
 import Returns from '../pages/Returns';
 import Contacts from '../pages/Contacts';
+import News from '../pages/News';
 import About from '../pages/About';
 import Catalog from '../pages/Catalog';
 import Category from '../pages/Category';
@@ -30,6 +31,7 @@ export const routeList = [
         {path: 'delivery', element: <Delivery/>, breadcrumb: 'Доставка и оплата'},
         {path: 'returns', element: <Returns/>, breadcrumb: 'Возврат'},
         {path: 'contacts', element: <Contacts/>, breadcrumb: 'Контакты'},
+        {path: 'news', element: <News />, breadcrumb: 'Новости'},
         {path: 'favorites', element: <Favorites/>, breadcrumb: 'Избранное'},
         {path: 'catalog', element: <Catalog/>, breadcrumb: 'Каталог'},
         {path: 'catalog/category', element: <Category/>, breadcrumb: 'Категория'},
