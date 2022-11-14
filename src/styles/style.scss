@@ -562,6 +562,7 @@ h6 {
 .blue {color: $blue;}
 
 .bg-white {background-color: #fff;}
+.bg-light-gray {background-color: $gray-2;}
 
 .w-fit {width: fit-content;}
 .br {border-radius: $radius;}
@@ -589,6 +590,13 @@ h6 {
 .box {
     background: rgba(24, 24, 24, 0.04);
     border-radius: 2em;
+    hr {
+        height: 1px;
+        width: 100%;
+        background-color: $font-color;
+        opacity: .1;
+        border: none;
+    }
 }
 .text {
     p {
@@ -1701,6 +1709,16 @@ figure.product-card {
 
 /* Account */
 .account {
+    .not-authorized {
+        text-align: center;
+        padding: 3em;
+        @media (max-width: 575px){
+            padding: 2em;
+        }
+        .lock {
+            font-size: 8em;
+        }
+    }
     h1 {
         font-size: 1.75em;
         @media (max-width: 767px){
@@ -1959,6 +1977,23 @@ figure.product-card {
         &.w2{width: 5em;}
     }
 }
+
+.consultation-list {
+    list-style: none;
+    padding-left: 0px;
+    li {
+        &:not(:first-child){margin-top: 1em;}
+        a {
+            font-size: 1.35em;
+            svg {
+                width: 2.5em;
+                height: 2.5em;
+                margin-right: 1em;
+            }
+        }
+    }
+}
+
 footer {
     height: var(--f-height);
     background-color: #262D33;
@@ -2033,6 +2068,20 @@ footer {
 /* OFFCANVAS */
 .offcanvas {
     &-body {padding: 2em}
+    &.offcanvas-bottom {
+        height: fit-content;
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
+        overflow: hidden;
+        border: none;
+        background-color: #262d33;
+        color: #fff;
+        .close {
+            top: .5em;
+            right: .5em;
+            color: #fff;
+        }
+    }
     .close {
         @include flex-center();
         position: absolute;

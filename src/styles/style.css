@@ -647,6 +647,10 @@ h6 {
   background-color: #fff;
 }
 
+.bg-light-gray {
+  background-color: #C4C4C4;
+}
+
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -697,6 +701,13 @@ h6 {
 .box {
   background: rgba(24, 24, 24, 0.04);
   border-radius: 2em;
+}
+.box hr {
+  height: 1px;
+  width: 100%;
+  background-color: #181818;
+  opacity: 0.1;
+  border: none;
 }
 
 .text p {
@@ -2065,6 +2076,18 @@ figure.product-card.mini img {
 }
 
 /* Account */
+.account .not-authorized {
+  text-align: center;
+  padding: 3em;
+}
+@media (max-width: 575px) {
+  .account .not-authorized {
+    padding: 2em;
+  }
+}
+.account .not-authorized .lock {
+  font-size: 8em;
+}
 .account h1 {
   font-size: 1.75em;
 }
@@ -2372,6 +2395,22 @@ figure.product-card.mini img {
   width: 5em;
 }
 
+.consultation-list {
+  list-style: none;
+  padding-left: 0px;
+}
+.consultation-list li:not(:first-child) {
+  margin-top: 1em;
+}
+.consultation-list li a {
+  font-size: 1.35em;
+}
+.consultation-list li a svg {
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 1em;
+}
+
 footer {
   height: var(--f-height);
   background-color: #262D33;
@@ -2451,6 +2490,22 @@ footer .mobile ul a svg {
 /* OFFCANVAS */
 .offcanvas-body {
   padding: 2em;
+}
+.offcanvas.offcanvas-bottom {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  overflow: hidden;
+  border: none;
+  background-color: #262d33;
+  color: #fff;
+}
+.offcanvas.offcanvas-bottom .close {
+  top: 0.5em;
+  right: 0.5em;
+  color: #fff;
 }
 .offcanvas .close {
   display: flex;

@@ -19,7 +19,12 @@ export default function Registration(props) {
                                 <div className='fs-13 mb-2 mb-sm-3'>Номер телефона <span className='main-color'>*</span></div>
                                 <input type='tel' placeholder='+7 999 345-67-89' className='py-3 px-4 mb-3 mb-sm-4'/>
                                 <label className='fs-13 mb-2 mb-sm-3'>Электронная почта <span className='main-color'>*</span></label>
-                                <input type='email' placeholder='Введите Вашу электронную почту' className='py-3 px-4 mb-3 mb-sm-4'/>
+                                <div className='form-group mb-3 mb-sm-4'>
+                                    <input type='email' placeholder='Введите Вашу электронную почту' className='py-3 px-4'/>
+                                    <button type="button" className='btn-1 px-2 px-sm-4'>Выслать код</button>
+                                </div>
+                                <label className='fs-11 fw-3 mb-2 mb-sm-3'>Код с почты <span className='main-color'>*</span></label>
+                                <input type='number' placeholder='Код' className='py-3 px-4 mb-3 mb-sm-4'/>
                                 <label className='fs-13 mb-2 mb-sm-3'>Пароль <span className='main-color'>*</span></label>
                                 <InputPassword placeholder='Введите пароль' inputClass='py-3 px-4' className='mb-3 mb-sm-4'/>
                                 <label className='fs-13 mb-2 mb-sm-3'>Повторите пароль <span className='main-color'>*</span></label>

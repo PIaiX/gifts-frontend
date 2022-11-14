@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 import Modal from 'react-bootstrap/Modal'
+import Offcanvas from 'react-bootstrap/Offcanvas'
 import useIsMobile from '../../hooks/isMobile'
 import { NavLink } from 'react-router-dom'
-import { FiUser, FiMapPin, FiCreditCard, FiBell, FiLogOut, FiShoppingBag, FiHelpCircle, FiXCircle } from "react-icons/fi"
+import { FiUser, FiMapPin, FiCreditCard, FiBell, FiLogOut, FiShoppingBag, FiHelpCircle, FiXCircle, FiPhone, FiMessageCircle, FiX } from "react-icons/fi"
 import {ReactComponent as VK} from '../../styles/imgs/VK.svg'
 import {ReactComponent as Telegram} from '../../styles/imgs/Telegram.svg'
 import {ReactComponent as Whatsapp} from '../../styles/imgs/whatsapp.svg'
 import {ReactComponent as Online} from '../../styles/imgs/online.svg'
+import { FcCallback } from "react-icons/fc";
 
 export default function AccountMenu() {
     const {mobile} = useIsMobile();
@@ -14,6 +16,10 @@ export default function AccountMenu() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [showСonsultation, setShowСonsultation] = useState(false);
+    const handleCloseСonsultation = () => setShowСonsultation(false);
+    const handleShowСonsultation = () => setShowСonsultation(true);
 
     return (
         <>
@@ -89,6 +95,20 @@ export default function AccountMenu() {
         </nav>
         {
             (mobile)
+            && <div className='box p-4 mt-4'>
+                <button type='button' onClick={handleShowСonsultation} className='fs-11 mb-3'>
+                    <FiMessageCircle className='fs-13'/> 
+                    <span className='ms-3'>Написать консультанту</span>
+                </button>
+                <hr />
+                <a href='tel:+79000000000' className='fs-11'>
+                    <FiPhone className='fs-13'/>
+                    <span className='ms-3'>Позвонить</span>
+                </a>
+            </div>
+        }
+        {
+            (mobile)
             && <ul className='social-list list-unstyled mt-4'>
                 <li><a href='/'><VK/></a></li>
                 <li><a href='/'><Telegram/></a></li>
@@ -112,6 +132,40 @@ export default function AccountMenu() {
                 <button className='btn-1 px-5 mx-auto mt-4' onClick={handleClose}>Назад</button>
             </Modal.Body>
         </Modal>
+
+        <Offcanvas show={showСonsultation} placement={'bottom'} onHide={handleCloseСonsultation}>
+            <Offcanvas.Body className=''>
+                <button type='button' className='close' onClick={handleCloseСonsultation}>
+                    <FiX/>
+                </button>
+                <ul className='consultation-list'>
+                    <li>
+                        <a href='/'>
+                            <VK/>
+                            <span>ВКонтакте</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='/'>
+                            <Telegram/>
+                            <span>Telegram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='/'>
+                            <Whatsapp/>
+                            <span>WhatsApp</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='tel:+79000000000'>
+                            <FcCallback/>
+                            <span>Позвонить</span>
+                        </a>
+                    </li>
+                </ul>
+            </Offcanvas.Body>
+        </Offcanvas>
         </>
     )
 }
