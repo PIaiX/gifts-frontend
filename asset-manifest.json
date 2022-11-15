@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gifts-react/static/css/main.d31809fd.css",
-    "main.js": "/gifts-react/static/js/main.8d37f411.js",
+    "main.css": "/gifts-react/static/css/main.31c0f689.css",
+    "main.js": "/gifts-react/static/js/main.7d5bfb8b.js",
     "static/media/horizontal.jpg": "/gifts-react/static/media/horizontal.9ace9c0c111901736f9a.jpg",
     "static/media/Mont-ThinItalic.eot": "/gifts-react/static/media/Mont-ThinItalic.5510e8d36aaaf841911a.eot",
     "static/media/Mont-ExtraLightItalic.eot": "/gifts-react/static/media/Mont-ExtraLightItalic.0329ea9a75589c1375c9.eot",
@@ -73,19 +73,24 @@
     "static/media/bg-1.jpg": "/gifts-react/static/media/bg-1.78f3e9a39bb4baf4bb1c.jpg",
     "static/media/Mont-Black.woff2": "/gifts-react/static/media/Mont-Black.2e299ff4d72dac880c22.woff2",
     "static/media/Magnoliascript.woff2": "/gifts-react/static/media/Magnoliascript.a0c207d82884df4886bd.woff2",
+    "static/media/online.svg": "/gifts-react/static/media/online.22a74373858b82ecc9ef6d71bbff712b.svg",
+    "static/media/VK.svg": "/gifts-react/static/media/VK.574cdcebb0ed2032c121147e7f44cba6.svg",
     "static/media/cart.svg": "/gifts-react/static/media/cart.006ee022a2f3e20c4ce6c176c075624d.svg",
+    "static/media/Telegram.svg": "/gifts-react/static/media/Telegram.c4584eb0c71e456ad6072362aa8e1c1e.svg",
+    "static/media/whatsapp.svg": "/gifts-react/static/media/whatsapp.1884d536fcc17f59e63614a736cd82d2.svg",
     "static/media/catalog.svg": "/gifts-react/static/media/catalog.5b6cc789949ca7cff649e476ccc77b21.svg",
     "static/media/account.svg": "/gifts-react/static/media/account.d2082647d148332ebd2d846a96d2a8f1.svg",
     "static/media/home.svg": "/gifts-react/static/media/home.eef420fc48daf1e02d7f9a70bce666d3.svg",
     "index.html": "/gifts-react/index.html",
     "static/media/down.svg": "/gifts-react/static/media/down.5ca893b225197572b1dd.svg",
     "static/media/plus.svg": "/gifts-react/static/media/plus.4e9231fd83a723c64a1f.svg",
+    "static/media/radio.svg": "/gifts-react/static/media/radio.8602e82b604b11880df9.svg",
     "static/media/mark.svg": "/gifts-react/static/media/mark.76cd1c33be8fe4c57a8b.svg",
-    "main.d31809fd.css.map": "/gifts-react/static/css/main.d31809fd.css.map",
-    "main.8d37f411.js.map": "/gifts-react/static/js/main.8d37f411.js.map"
+    "main.31c0f689.css.map": "/gifts-react/static/css/main.31c0f689.css.map",
+    "main.7d5bfb8b.js.map": "/gifts-react/static/js/main.7d5bfb8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d31809fd.css",
-    "static/js/main.8d37f411.js"
+    "static/css/main.31c0f689.css",
+    "static/js/main.7d5bfb8b.js"
   ]
 }
