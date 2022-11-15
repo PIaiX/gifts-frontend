@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/utils/Breadcrumbs';
+import ProductMini from '../components/ProductMini';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -45,14 +46,20 @@ export default function Checkout(props) {
                             <div className='box p-3 p-sm-4'>
                                 <h3 className='text-start fs-20 fw-6 mb-2'>Товары</h3>
                                 <div className='fw-6 mb-4 mb-sm-5'><Link to='/' className='main-color text-decoration-underline'>Авторизируйтесь</Link> и получите 253 Балла</div>
-                                <div className='d-flex justify-content-between align-items-center'>
-                                    <div className='gray fs-15 fw-6'>Итого:</div>
-                                    <div className='d-flex flex-wrap align-items-center justify-content-end'>
-                                        <span className='fs-17 fw-6'>2 793 ₽</span>
-                                        <del className='fs-13 fw-6 gray ms-3'>5 000 ₽</del>
-                                    </div>
+                                <div className='mb-4 mb-sm-5'>
+                                    <ProductMini />
+                                    <ProductMini />
+                                    <ProductMini />
+                                    <ProductMini />
                                 </div>
-                                <Link to='checkout' className='btn-1 w-100 mt-3 mt-sm-4'>Перейти к оформлению</Link>
+                                <Row xs={2} className='g-2 g-sm-3'>
+                                    <Col className='gray fs-12 fw-6'>Сумма:</Col>
+                                    <Col className='text-end fs-14'>5000&nbsp;₽</Col>
+                                    <Col className='gray fs-12 fw-6'>Скидка:</Col>
+                                    <Col className='text-end fs-12'>-2300&nbsp;₽</Col>
+                                    <Col className='gray fs-15 fw-6'>Итого:</Col>
+                                    <Col className='text-end fs-17 fw-6'>2700&nbsp;₽</Col>
+                                </Row>
                             </div>
                         </Col>
                     </Row>
@@ -133,11 +140,19 @@ export default function Checkout(props) {
                             <Col xs={12} md={6} lg={5} xxl={4}>
                                 <div className='d-flex align-items-center justify-content-between mb-3'>
                                     <span>Стоимость:</span>
-                                    <span>355 960 ₽</span>
+                                    <span>3590&nbsp;₽</span>
+                                </div>
+                                <div className='d-flex align-items-center justify-content-between mb-3'>
+                                    <span>Скидка:</span>
+                                    <span>-400&nbsp;₽</span>
+                                </div>
+                                <div className='d-flex align-items-center justify-content-between mb-3'>
+                                    <span>Баллы:</span>
+                                    <span>-400&nbsp;Б</span>
                                 </div>
                                 <div className='d-flex align-items-center justify-content-between mb-3'>
                                     <span>Доставка:</span>
-                                    <span>400 ₽</span>
+                                    <span>400&nbsp;₽</span>
                                 </div>
                                 <div className='d-flex align-items-center justify-content-between mb-3'>
                                     <span>Срок доставки:</span>

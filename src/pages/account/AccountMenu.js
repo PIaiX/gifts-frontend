@@ -7,8 +7,8 @@ import { FiUser, FiMapPin, FiCreditCard, FiBell, FiLogOut, FiShoppingBag, FiHelp
 import {ReactComponent as VK} from '../../styles/imgs/VK.svg'
 import {ReactComponent as Telegram} from '../../styles/imgs/Telegram.svg'
 import {ReactComponent as Whatsapp} from '../../styles/imgs/whatsapp.svg'
-import {ReactComponent as Online} from '../../styles/imgs/online.svg'
 import { FcCallback } from "react-icons/fc";
+import Social from '../../components/utils/Social'
 
 export default function AccountMenu() {
     const {mobile} = useIsMobile();
@@ -109,12 +109,7 @@ export default function AccountMenu() {
         }
         {
             (mobile)
-            && <ul className='social-list list-unstyled mt-4'>
-                <li><a href='/'><VK/></a></li>
-                <li><a href='/'><Telegram/></a></li>
-                <li><a href='/'><Whatsapp/></a></li>
-                <li><a href='/'><Online className='w2'/></a></li>
-            </ul>
+            && <Social className='mt-4'/>
         }
         
         <Modal show={show} onHide={handleClose}>
@@ -140,19 +135,19 @@ export default function AccountMenu() {
                 </button>
                 <ul className='consultation-list'>
                     <li>
-                        <a href='/'>
+                        <a href='https://vk.com/bdkzn'>
                             <VK/>
                             <span>ВКонтакте</span>
                         </a>
                     </li>
                     <li>
-                        <a href='/'>
+                        <a href='https://t.me/presents_beautifulday'>
                             <Telegram/>
                             <span>Telegram</span>
                         </a>
                     </li>
                     <li>
-                        <a href='/'>
+                        <a href='https://wa.me/79600555160'>
                             <Whatsapp/>
                             <span>WhatsApp</span>
                         </a>

@@ -115,7 +115,7 @@ function Header(props) {
                     </ul>
                 </nav>
                 <button type='button' className='main-color text-decoration-underline fs-12 mb-3'>Заказать звонок</button>
-                <a href='tel:+79653456789' className='fw-6 fs-15'>+7 (965) 345-67-89</a>
+                <a href='tel:+79653456789' className='fw-6 fs-17'>+7 (965) 345-67-89</a>
             </Offcanvas.Body>
         </Offcanvas>
         </>

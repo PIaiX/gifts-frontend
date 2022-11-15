@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import StarRating from './utils/StarRating';
 import { FiPlus, FiMinus, FiTrash2 } from "react-icons/fi";
 import BtnFav from './utils/BtnFav';
@@ -7,9 +8,9 @@ export default function CartItem(props) {
     return (
         <div className='cart-item'>
             <figure >
-                <img src={props.imgUrl} alt={props.title}/>
+                <Link to='/catalog/category/list/product'><img src={props.imgUrl} alt={props.title}/></Link>
                 <figcaption>
-                    <h5 className='mb-2'>{props.title}</h5>
+                    <h5 className='mb-2'><Link to='/catalog/category/list/product'>{props.title}</Link></h5>
                     <div className='d-flex align-items-start fs-09'>
                         <StarRating rate={props.rating} />
                         <span className='gray ms-2'>({props.reviewsCount})</span>

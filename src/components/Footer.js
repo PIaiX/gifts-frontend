@@ -8,12 +8,9 @@ import {ReactComponent as Home} from '../styles/imgs/home.svg'
 import {ReactComponent as Catalog} from '../styles/imgs/catalog.svg'
 import {ReactComponent as Cart} from '../styles/imgs/cart.svg'
 import {ReactComponent as Account} from '../styles/imgs/account.svg'
-import {ReactComponent as VK} from '../styles/imgs/VK.svg'
-import {ReactComponent as Telegram} from '../styles/imgs/Telegram.svg'
-import {ReactComponent as Whatsapp} from '../styles/imgs/whatsapp.svg'
-import {ReactComponent as Online} from '../styles/imgs/online.svg'
 import { FiMapPin, FiSmartphone, FiMail, FiChevronRight } from "react-icons/fi"
 import asm from '../styles/imgs/asm_white.png'
+import Social from './utils/Social'
 
 function Footer(props) {
     const currentYear = new Date().getFullYear();
@@ -56,12 +53,7 @@ function Footer(props) {
                     </Col>
                     <Col md={3}>
                         <h6 className='text-uppercase fw-4 mb-4'>Мы в социальных сетях</h6>
-                        <ul className='social-list list-unstyled d-flex mb-4'>
-                            <li><a href='/'><VK/></a></li>
-                            <li><a href='/'><Telegram/></a></li>
-                            <li><a href='/'><Whatsapp/></a></li>
-                            <li><a href='/'><Online className='w2'/></a></li>
-                        </ul>
+                        <Social className='mb-4' />
                         <p className='fw-3 fs-09 mb-3'>Подпишитесь на новостную рассылку, чтобы быть в курсе новинок, свежих акций и самых выгодных предложений:</p>
                         <form className='mailing'>
                             <input type='email' placeholder='email'/>

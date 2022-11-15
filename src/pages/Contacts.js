@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Breadcrumbs from '../components/utils/Breadcrumbs';
 import { IoCall, IoTime, IoLocationSharp, IoMail } from "react-icons/io5";
+import Social from '../components/utils/Social';
 
 export default function Contacts(props) {
     return (
@@ -43,6 +44,7 @@ export default function Contacts(props) {
                                     </div>
                                 </li>
                             </ul>
+                            <Social className='my-4 mt-md-5 mb-md-0'/>
                         </Col>
                         <Col xs={12} md={6} lg={8}>
                             <img src='imgs/shop-img.jpg' alt='магазин' className='img-fluid br'/>
