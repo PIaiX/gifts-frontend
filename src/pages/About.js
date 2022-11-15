@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion';
 import Breadcrumbs from '../components/utils/Breadcrumbs';
 
-export default function About(props) {
+export default function About() {
     return (
         <main>
             <Container>

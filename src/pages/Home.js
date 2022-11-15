@@ -126,7 +126,7 @@ function Home() {
                 <Container>
                     <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
                         <h2 className='mb-0'>Лучшие предложения</h2>
-                        <Link to="/" className='fw-6 d-flex align-items-center'>
+                        <Link to="/offers" className='fw-6 d-flex align-items-center'>
                             <span>Смотреть&nbsp;все</span>
                             <BiChevronRight className='fs-12'/>
                         </Link>
@@ -158,28 +158,44 @@ function Home() {
                             }}
                         >
                             <SwiperSlide>
-                                <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
+                                <Link to='/offers/offer'>
+                                    <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src='imgs/offers/offer2.jpg' alt='offer2' className='offer'/>
+                                <Link to='/offers/offer'>
+                                    <img src='imgs/offers/offer2.jpg' alt='offer2' className='offer'/>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src='imgs/offers/offer3.jpg' alt='offer3' className='offer'/>
+                                <Link to='/offers/offer'>
+                                    <img src='imgs/offers/offer3.jpg' alt='offer3' className='offer'/>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src='imgs/offers/offer4.jpg' alt='offer4' className='offer'/>
+                                <Link to='/offers/offer'>
+                                    <img src='imgs/offers/offer4.jpg' alt='offer4' className='offer'/>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
+                                <Link to='/offers/offer'>
+                                    <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src='imgs/offers/offer2.jpg' alt='offer2' className='offer'/>
+                                <Link to='/offers/offer'>
+                                    <img src='imgs/offers/offer2.jpg' alt='offer2' className='offer'/>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src='imgs/offers/offer3.jpg' alt='offer3' className='offer'/>
+                                <Link to='/offers/offer'>
+                                    <img src='imgs/offers/offer3.jpg' alt='offer3' className='offer'/>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src='imgs/offers/offer4.jpg' alt='offer4' className='offer'/>
+                                <Link to='/offers/offer'>
+                                    <img src='imgs/offers/offer4.jpg' alt='offer4' className='offer'/>
+                                </Link>
                             </SwiperSlide>
                         </Swiper>
                     </div>

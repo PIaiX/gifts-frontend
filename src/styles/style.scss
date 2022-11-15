@@ -2,6 +2,7 @@ $main-font: "Mont";
 $title-font: "Magnolia Script";
 $font-color: #181818;
 $main-color: #DD4141;
+$accent: #FF4E58;
 $light-color: #FFE8E8;
 $dark-gray: #181818;
 $gray: #9D9D9D;
@@ -300,7 +301,7 @@ button {
     font-weight: 500;
     &-1 {
         @extend .btn;
-        background: $gradient;
+        background: $accent;
         color: #fff;
         font-weight: 600;
         border-radius: $radius;
@@ -309,6 +310,7 @@ button {
         overflow: hidden;
         &:hover, &:focus, &:active {
             color: #fff;
+            background: $main-color;
         }
     }
     &-2 {
@@ -317,6 +319,10 @@ button {
         color: $main-color;
         font-weight: 600;
         border-radius: $radius;
+        &:hover, &:focus, &:active {
+            color: #fff;
+            background: $accent;
+        }
     }
     &-fav {
         background-color: #fff;
@@ -617,12 +623,15 @@ h6 {
         list-style: none;
         padding-left: 0px;
         font-size: .9em;
-        font-weight: 300;
+        font-weight: 400;
         color: $gray;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: flex-start;
+        @media (max-width: 991px){
+            font-size: 1em;
+        }
         li {
             &:not(:first-child){
                 margin-left: .5em;
@@ -1570,6 +1579,35 @@ figure.product-card {
         }
     }
 }
+.offer-midi {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: $radius;
+    @media (max-width: 1659px){
+        height: 380px;
+    }
+    @media (max-width: 1399px){
+        height: 350px;
+    }
+    @media (max-width: 1199px){
+        height: 400px;
+    }
+    @media (max-width: 991px){
+        height: 280px;
+    }
+    @media (max-width: 767px){
+        height: 320px;
+    }
+    @media (max-width: 575px){
+        height: 120vw;
+    }
+}
+.offer-full {
+    p {
+        margin-top: 1.5em;
+    }
+}
 
 
 .help {
@@ -1656,30 +1694,33 @@ figure.product-card {
         border-bottom: 2px solid #dfdfdf;
         margin-bottom: 3em;
     }
-    img {
+    .img {
         width: 45%;
-        height: 280px;
-        object-fit: cover;
-        border-radius: $radius;
-        @media (max-width: 1659px) {
-            height: 250px;
-        }
-        @media (max-width: 1399px) {
-            height: 230px;
-        }
-        @media (max-width: 1199px) {
-            height: 180px;
-        }
-        @media (max-width: 991px) {
-            height: 210px;
-        }
-        @media (max-width: 767px) {
-            height: 160px;
-        }
-        @media (max-width: 575px) {
-            height: 55vw;
+        img {
             width: 100%;
-            margin-top: 1em;
+            height: 280px;
+            object-fit: cover;
+            border-radius: $radius;
+            @media (max-width: 1659px) {
+                height: 250px;
+            }
+            @media (max-width: 1399px) {
+                height: 230px;
+            }
+            @media (max-width: 1199px) {
+                height: 180px;
+            }
+            @media (max-width: 991px) {
+                height: 210px;
+            }
+            @media (max-width: 767px) {
+                height: 160px;
+            }
+            @media (max-width: 575px) {
+                height: 55vw;
+                width: 100%;
+                margin-top: 1em;
+            }
         }
     }
     figcaption {
@@ -1699,6 +1740,17 @@ figure.product-card {
 }
 article.preview {
     &:not(:first-child){margin-top: 2.5em;}
+}
+article.full {
+    img {
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+    h3 {
+        text-align: left;
+        margin-top: 1.5em;
+    }
+    p {margin-top: 1.5em;}
 }
 
 
@@ -2175,8 +2227,7 @@ footer {
             li {
                 &:not(:first-child){margin-top: 1em;}
                 a {
-                    font-size: 1.25em;
-
+                    font-size: 1.5em;
                 }
             }
         }

@@ -7,6 +7,7 @@ import Balloons from '../pages/Balloons';
 import Delivery from '../pages/Delivery';
 import Returns from '../pages/Returns';
 import Contacts from '../pages/Contacts';
+import AllNews from '../pages/AllNews';
 import News from '../pages/News';
 import About from '../pages/About';
 import Catalog from '../pages/Catalog';
@@ -20,6 +21,9 @@ import Login from '../pages/Login';
 import ResetPassword from '../pages/ResetPassword';
 import Registration from '../pages/Registration';
 import Account from '../pages/account/Account';
+import AllOffers from '../pages/AllOffers';
+import Offer from '../pages/Offer';
+import NotFound from '../pages/NotFound';
 
 export const routeList = [
     {
@@ -31,7 +35,10 @@ export const routeList = [
         {path: 'delivery', element: <Delivery/>, breadcrumb: 'Доставка и оплата'},
         {path: 'returns', element: <Returns/>, breadcrumb: 'Возврат'},
         {path: 'contacts', element: <Contacts/>, breadcrumb: 'Контакты'},
-        {path: 'news', element: <News />, breadcrumb: 'Новости'},
+        {path: 'offers', element: <AllOffers/>, breadcrumb: 'Акции'},
+        {path: 'offers/offer', element: <Offer/>, breadcrumb: 'Название акции'},
+        {path: 'all-news', element: <AllNews />, breadcrumb: 'Новости'},
+        {path: 'all-news/news', element: <News/>, breadcrumb: 'Название новости'},
         {path: 'favorites', element: <Favorites/>, breadcrumb: 'Избранное'},
         {path: 'catalog', element: <Catalog/>, breadcrumb: 'Каталог'},
         {path: 'catalog/category', element: <Category/>, breadcrumb: 'Категория'},
@@ -44,6 +51,7 @@ export const routeList = [
         {path: 'login', element: <Login/> , breadcrumb: 'Вход в личный кабинет'},
         {path: 'reset-password', element: <ResetPassword/> , breadcrumb: 'Восстановление пароля'},
         {path: 'account/*', element: <Account/>, breadcrumb: 'Личный аккаунт'},
+        {path: '*', element: <NotFound/>, breadcrumb: 'Страница не найдена 404'},
       ],
     },
   ];

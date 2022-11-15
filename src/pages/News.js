@@ -4,8 +4,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import Breadcrumbs from '../components/utils/Breadcrumbs'
-import ArticleMedium from '../components/ArticleMedium'
-import NavPagination from '../components/NavPagination'
 import ArticlePreview2 from '../components/ArticlePreview2'
 
 const News = () => {
@@ -15,21 +13,10 @@ const News = () => {
                 <Breadcrumbs/>
 
                 <section className='mb-8'>
-                    <h1>Новости</h1>
                     <Row className='flex-lg-row-reverse gx-4 gx-xl-5'>
                         <Col lg={4}>
-                            <div className='box p-3 p-sm-4 p-xxl-5 mb-4 mb-xl-5'>
-                                <h2 className='text-start'>Тэги</h2>
-                                <div className='tags'>
-                                    <button type='button' className='btn-2'>Все</button>
-                                    <button type='button' className='btn-2'>#НовыйГод</button>
-                                    <button type='button' className='btn-2'>#8марта</button>
-                                    <button type='button' className='btn-2'>#23февраля</button>
-                                    <button type='button' className='btn-2'>#14февраля</button>
-                                </div>
-                            </div>
                             <div className='d-none d-lg-block box p-4 p-xxl-5'>
-                                <h2 className='text-start'>Популярное </h2>
+                                <h3 className='text-start fs-17 mb-5'>Вам может быть интересно</h3>
                                 <div>
                                     <ArticlePreview2 link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
                                     <ArticlePreview2 link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
@@ -38,17 +25,18 @@ const News = () => {
                             </div>
                         </Col>
                         <Col lg={8}>
-                            <div className='box p-3 p-sm-4 p-xxl-5'>
-                                <h2 className='text-start'>Последние новости</h2>
-                                <div className='mb-5'>
-                                    <ArticleMedium />
-                                    <ArticleMedium />
-                                    <ArticleMedium />
-                                    <ArticleMedium />
-                                    <ArticleMedium />
-                                </div>
-                                <NavPagination />
-                            </div>
+                            <article className='full'>
+                                <h1>Идеи подарков к Новому Году</h1>
+                                <img src='imgs/main-slider/slide2.png' alt='Идеи подарков к Новому Году'/>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </article>
                         </Col>
                     </Row>
                 </section>

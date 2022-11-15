@@ -79,11 +79,11 @@ function Header(props) {
                 <nav className='main'>
                     <ul>
                         <li><NavLink to='/'>Новинки</NavLink></li>
-                        <li><NavLink to='/'>Акции</NavLink></li>
+                        <li><NavLink to='/offers'>Акции</NavLink></li>
                         <li><NavLink to='/about'>О компании</NavLink></li>
                         <li><NavLink to='/delivery'>Доставка и оплата</NavLink></li>
                         <li><NavLink to='/returns'>Возврат</NavLink></li>
-                        <li><NavLink to='/news'>Новости</NavLink></li>
+                        <li><NavLink to='/all-news'>Новости</NavLink></li>
                         <li><NavLink to='/contacts'>Контакты</NavLink></li>
                     </ul>
                 </nav>
@@ -94,28 +94,28 @@ function Header(props) {
                 <button type='button' className='close' onClick={handleClose}>
                     <FiX/>
                 </button>
-                <h4>Меню</h4>
-                <div className='mb-3'>
+                <h2>Меню</h2>
+                <div className='fs-12 mb-3'>
                     <span className='fw-3'>Ваш город:</span>
                     <span className='ms-1'>Казань</span>
                 </div>
-                <div className='d-flex align-items-baseline mb-4'>
+                <div className='fs-12 d-flex align-items-baseline mb-4'>
                     <IoLocationSharp className='main-color'/>
                     <span className='fw-6 ms-2'>Рашида Вагапова 3</span>
                 </div>
                 <nav className='mb-4'>
                     <ul>
                         <li><NavLink to='/'>Новинки</NavLink></li>
-                        <li><NavLink to='/'>Акции</NavLink></li>
+                        <li><NavLink to='/offers'>Акции</NavLink></li>
                         <li><NavLink to='/about'>О компании</NavLink></li>
                         <li><NavLink to='/delivery'>Доставка и оплата</NavLink></li>
                         <li><NavLink to='/returns'>Возврат</NavLink></li>
-                        <li><NavLink to='/news'>Новости</NavLink></li>
+                        <li><NavLink to='/all-news'>Новости</NavLink></li>
                         <li><NavLink to='/contacts'>Контакты</NavLink></li>
                     </ul>
                 </nav>
-                <button type='button' className='main-color text-decoration-underline mb-3'>Заказать звонок</button>
-                <a href='tel:+79653456789' className='fw-6 fs-13'>+7 (965) 345-67-89</a>
+                <button type='button' className='main-color text-decoration-underline fs-12 mb-3'>Заказать звонок</button>
+                <a href='tel:+79653456789' className='fw-6 fs-15'>+7 (965) 345-67-89</a>
             </Offcanvas.Body>
         </Offcanvas>
         </>

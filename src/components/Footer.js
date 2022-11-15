@@ -46,7 +46,7 @@ function Footer(props) {
                                     <Link to='/returns'>Возврат товара</Link>
                                 </li>
                                 <li>
-                                    <Link to='/'>Новости</Link>
+                                    <Link to='/all-news'>Новости</Link>
                                 </li>
                                 <li>
                                     <Link to='/contacts'>Контакты</Link>
