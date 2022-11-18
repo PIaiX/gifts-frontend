@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { FcLock } from "react-icons/fc";
 
 export default function Account() {
-    const {mobile} = useIsMobile();
+    const {mobile} = useIsMobile('991px');
 
     return (
         <main>

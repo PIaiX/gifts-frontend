@@ -11,7 +11,7 @@ import { FcCallback } from "react-icons/fc";
 import Social from '../../components/utils/Social'
 
 export default function AccountMenu() {
-    const {mobile} = useIsMobile();
+    const {mobile} = useIsMobile('991px');
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
