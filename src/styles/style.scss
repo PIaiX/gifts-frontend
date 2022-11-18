@@ -14,8 +14,6 @@ $transition: .3s ease;
 $radius: 2.5em;
 $radius-sm: 1.5em;
 
-// "homepage": "https://ngf93.github.io/gifts-react",
-
 /* mixins */
 @mixin flex-center {
     display: flex;
@@ -2337,7 +2335,7 @@ footer {
 
 .alert {
     background-color: #fff;
-    color: $accent;
+    color: #32b175;
     padding: 1.5em 2em;
     font-size: 1em;
     font-weight: 600;
