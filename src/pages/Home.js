@@ -2,10 +2,10 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, FreeMode  } from 'swiper'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {Navigation, Pagination, FreeMode} from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/free-mode'
@@ -17,55 +17,61 @@ import ArticlePreview from '../components/ArticlePreview'
 import ProductCard from '../components/ProductCard'
 import PopularProductsSlider from '../components/PopularProductsSlider'
 
-import { BiChevronRight } from "react-icons/bi"
+import {BiChevronRight} from 'react-icons/bi'
 
 function Home() {
     return (
         <main>
             <Container>
-                <section className='position-relative mb-8'>
+                <section className="position-relative mb-8">
                     <Swiper
-                        className='main-slider'
+                        className="main-slider"
                         modules={[Navigation, Pagination, FreeMode]}
                         spaceBetween={20}
                         slidesPerView={1}
                         navigation
                         freeMode={true}
-                        pagination={{ clickable: true }}
+                        pagination={{clickable: true}}
                         breakpoints={{
                             576: {
                                 spaceBetween: 15,
-                                slidesPerView: 'auto'
+                                slidesPerView: 'auto',
                             },
                             768: {
                                 spaceBetween: 30,
-                                slidesPerView: 'auto'
+                                slidesPerView: 'auto',
                             },
                             1400: {
                                 spaceBetween: 50,
-                                slidesPerView: 'auto'
+                                slidesPerView: 'auto',
                             },
                         }}
-                        >
+                    >
                         <SwiperSlide>
                             <figure>
-                                <img src='imgs/main-slider/slide1.png' alt='Подарки к 8 марта'/>
+                                <img src="imgs/main-slider/slide1.png" alt="Подарки к 8 марта" />
                                 <figcaption>
-                                    <h2>Подарки<br/> к 8 марта</h2>
+                                    <h2>
+                                        Подарки
+                                        <br /> к 8 марта
+                                    </h2>
                                 </figcaption>
                             </figure>
                         </SwiperSlide>
                         <SwiperSlide>
                             <figure>
-                                <img src='imgs/main-slider/slide2.png' alt='Подарки к Новому Году'/>
+                                <img src="imgs/main-slider/slide2.png" alt="Подарки к Новому Году" />
                                 <figcaption>
-                                    <h2>Подарки<br/> к Новому Году</h2>
+                                    <h2>
+                                        Подарки
+                                        <br /> к Новому Году
+                                    </h2>
                                 </figcaption>
                             </figure>
                         </SwiperSlide>
                         <SwiperSlide>
                             <figure>
-                                <img src='imgs/main-slider/slide1.png' alt='Подарки к 8 марта'/>
+                                <img src="imgs/main-slider/slide1.png" alt="Подарки к 8 марта" />
                                 <figcaption>
                                     <h2>Подарки к 8 марта</h2>
                                 </figcaption>
@@ -73,7 +79,7 @@ function Home() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <figure>
-                                <img src='imgs/main-slider/slide2.png' alt='Подарки к Новому Году'/>
+                                <img src="imgs/main-slider/slide2.png" alt="Подарки к Новому Году" />
                                 <figcaption>
                                     <h2>Подарки к Новому Году</h2>
                                 </figcaption>
@@ -82,18 +88,18 @@ function Home() {
                     </Swiper>
                 </section>
 
-                <section className='mb-8'>
-                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
-                        <h2 className='mb-0'>Популярные категории</h2>
-                        <Link to="/" className='fw-6 d-flex align-items-center'>
+                <section className="mb-8">
+                    <div className="d-flex justify-content-between align-items-center mb-4 mb-lg-5">
+                        <h2 className="mb-0">Популярные категории</h2>
+                        <Link to="/" className="fw-6 d-flex align-items-center">
                             <span>Смотреть&nbsp;все</span>
-                            <BiChevronRight className='fs-12'/>
+                            <BiChevronRight className="fs-12" />
                         </Link>
                     </div>
 
-                    <aside className='d-none d-lg-block horizontal mb-5'></aside>
+                    <aside className="d-none d-lg-block horizontal mb-5"></aside>
 
-                    <Row xs={2} md={3} lg={4} className='gy-4 gy-lg-5 gx-2 gx-sm-3'>
+                    <Row xs={2} md={3} lg={4} className="gy-4 gy-lg-5 gx-2 gx-sm-3">
                         <Col>
                             <CategoryCard title={'Наборы'} imgUrl={'imgs/categories/cat1.jpg'} />
                         </Col>
@@ -122,18 +128,18 @@ function Home() {
                 </section>
             </Container>
 
-            <section className='offers mb-8'>
+            <section className="offers mb-8">
                 <Container>
-                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
-                        <h2 className='mb-0'>Лучшие предложения</h2>
-                        <Link to="/offers" className='fw-6 d-flex align-items-center'>
+                    <div className="d-flex justify-content-between align-items-center mb-4 mb-lg-5">
+                        <h2 className="mb-0">Лучшие предложения</h2>
+                        <Link to="/offers" className="fw-6 d-flex align-items-center">
                             <span>Смотреть&nbsp;все</span>
-                            <BiChevronRight className='fs-12'/>
+                            <BiChevronRight className="fs-12" />
                         </Link>
                     </div>
-                    <div className='position-relative'>
+                    <div className="position-relative">
                         <Swiper
-                            className='position-static py-xxl-5 mt-lg-5'
+                            className="position-static py-xxl-5 mt-lg-5"
                             modules={[Navigation]}
                             spaceBetween={10}
                             slidesPerView={2}
@@ -158,43 +164,43 @@ function Home() {
                             }}
                         >
                             <SwiperSlide>
-                                <Link to='/offers/offer'>
-                                    <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
+                                <Link to="/offers/offer">
+                                    <img src="imgs/offers/offer1.jpg" alt="offer1" className="offer" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link to='/offers/offer'>
-                                    <img src='imgs/offers/offer2.jpg' alt='offer2' className='offer'/>
+                                <Link to="/offers/offer">
+                                    <img src="imgs/offers/offer2.jpg" alt="offer2" className="offer" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link to='/offers/offer'>
-                                    <img src='imgs/offers/offer3.jpg' alt='offer3' className='offer'/>
+                                <Link to="/offers/offer">
+                                    <img src="imgs/offers/offer3.jpg" alt="offer3" className="offer" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link to='/offers/offer'>
-                                    <img src='imgs/offers/offer4.jpg' alt='offer4' className='offer'/>
+                                <Link to="/offers/offer">
+                                    <img src="imgs/offers/offer4.jpg" alt="offer4" className="offer" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link to='/offers/offer'>
-                                    <img src='imgs/offers/offer1.jpg' alt='offer1' className='offer'/>
+                                <Link to="/offers/offer">
+                                    <img src="imgs/offers/offer1.jpg" alt="offer1" className="offer" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link to='/offers/offer'>
-                                    <img src='imgs/offers/offer2.jpg' alt='offer2' className='offer'/>
+                                <Link to="/offers/offer">
+                                    <img src="imgs/offers/offer2.jpg" alt="offer2" className="offer" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link to='/offers/offer'>
-                                    <img src='imgs/offers/offer3.jpg' alt='offer3' className='offer'/>
+                                <Link to="/offers/offer">
+                                    <img src="imgs/offers/offer3.jpg" alt="offer3" className="offer" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link to='/offers/offer'>
-                                    <img src='imgs/offers/offer4.jpg' alt='offer4' className='offer'/>
+                                <Link to="/offers/offer">
+                                    <img src="imgs/offers/offer4.jpg" alt="offer4" className="offer" />
                                 </Link>
                             </SwiperSlide>
                         </Swiper>
@@ -203,46 +209,102 @@ function Home() {
             </section>
 
             <Container>
-                <section className='mb-8'>
-                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
-                        <h2 className='mb-0'>Наборы</h2>
-                        <Link to="/" className='fw-6 d-flex align-items-center'>
+                <section className="mb-8">
+                    <div className="d-flex justify-content-between align-items-center mb-4 mb-lg-5">
+                        <h2 className="mb-0">Наборы</h2>
+                        <Link to="/" className="fw-6 d-flex align-items-center">
                             <span>Смотреть&nbsp;все</span>
-                            <BiChevronRight className='fs-12'/>
+                            <BiChevronRight className="fs-12" />
                         </Link>
                     </div>
 
                     <Row>
                         <Col lg={5} xxl={4}>
-                            <aside className='vertical mb-4 mb-lg-0'></aside>
+                            <aside className="vertical mb-4 mb-lg-0"></aside>
                         </Col>
                         <Col lg={7} xxl={8}>
-                            <Row xs={2} md={3} xxl={4} className='gx-2 gx-sm-3 gy-4'>
+                            <Row xs={2} md={3} xxl={4} className="gx-2 gx-sm-3 gy-4">
                                 <Col>
-                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
-                                </Col>
-                                <Col>
-                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
-                                </Col>
-                                <Col>
-                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
-                                </Col>
-                                <Col>
-                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                    <ProductCard
+                                        className="mini"
+                                        link={'/'}
+                                        imgUrl={'imgs/product.jpg'}
+                                        title={'Термостакан со вставкой "Эспрессо Патронум...'}
+                                        rating={4.3}
+                                        reviewsCount={'110'}
+                                    />
                                 </Col>
                                 <Col>
-                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                    <ProductCard
+                                        className="mini"
+                                        link={'/'}
+                                        imgUrl={'imgs/product.jpg'}
+                                        title={'Термостакан со вставкой "Эспрессо Патронум...'}
+                                        rating={4.3}
+                                        reviewsCount={'110'}
+                                    />
                                 </Col>
                                 <Col>
-                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                    <ProductCard
+                                        className="mini"
+                                        link={'/'}
+                                        imgUrl={'imgs/product.jpg'}
+                                        title={'Термостакан со вставкой "Эспрессо Патронум...'}
+                                        rating={4.3}
+                                        reviewsCount={'110'}
+                                    />
                                 </Col>
-                                <Col className='d-none d-xxl-block'>
-                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                <Col>
+                                    <ProductCard
+                                        className="mini"
+                                        link={'/'}
+                                        imgUrl={'imgs/product.jpg'}
+                                        title={'Термостакан со вставкой "Эспрессо Патронум...'}
+                                        rating={4.3}
+                                        reviewsCount={'110'}
+                                    />
                                 </Col>
-                                <Col className='d-none d-xxl-block'>
-                                    <ProductCard className='mini' link={'/'} imgUrl={'imgs/product.jpg'} title={'Термостакан со вставкой "Эспрессо Патронум...'} rating={4.3} reviewsCount={'110'}/>
+                                <Col>
+                                    <ProductCard
+                                        className="mini"
+                                        link={'/'}
+                                        imgUrl={'imgs/product.jpg'}
+                                        title={'Термостакан со вставкой "Эспрессо Патронум...'}
+                                        rating={4.3}
+                                        reviewsCount={'110'}
+                                    />
                                 </Col>
-                            </Row> 
+                                <Col>
+                                    <ProductCard
+                                        className="mini"
+                                        link={'/'}
+                                        imgUrl={'imgs/product.jpg'}
+                                        title={'Термостакан со вставкой "Эспрессо Патронум...'}
+                                        rating={4.3}
+                                        reviewsCount={'110'}
+                                    />
+                                </Col>
+                                <Col className="d-none d-xxl-block">
+                                    <ProductCard
+                                        className="mini"
+                                        link={'/'}
+                                        imgUrl={'imgs/product.jpg'}
+                                        title={'Термостакан со вставкой "Эспрессо Патронум...'}
+                                        rating={4.3}
+                                        reviewsCount={'110'}
+                                    />
+                                </Col>
+                                <Col className="d-none d-xxl-block">
+                                    <ProductCard
+                                        className="mini"
+                                        link={'/'}
+                                        imgUrl={'imgs/product.jpg'}
+                                        title={'Термостакан со вставкой "Эспрессо Патронум...'}
+                                        rating={4.3}
+                                        reviewsCount={'110'}
+                                    />
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
                 </section>
@@ -250,32 +312,39 @@ function Home() {
                 <PopularProductsSlider />
             </Container>
 
-            <section className='help mb-8'>
+            <section className="help mb-8">
                 <Container>
                     <Row>
                         <Col xs={8} lg={6}>
                             <h2>Не знаете что подарить? Мы поможем!</h2>
-                            <p className='d-none d-md-block fs-12 fw-6'>Если вы до сих пор не знаете, что подарить, то Вам очень повезло. Мы всё уже нашли и придумали за Вас.</p>
-                            <p className='d-none d-md-block fs-12 fw-6'>А Вам осталось только ответить на несколько вопросов.</p>
-                            <button type='button' className='btn-1 mt-4'>Найти подарок</button>
+                            <p className="d-none d-md-block fs-12 fw-6">
+                                Если вы до сих пор не знаете, что подарить, то Вам очень повезло. Мы всё уже нашли и
+                                придумали за Вас.
+                            </p>
+                            <p className="d-none d-md-block fs-12 fw-6">
+                                А Вам осталось только ответить на несколько вопросов.
+                            </p>
+                            <button type="button" className="btn-1 mt-4">
+                                Найти подарок
+                            </button>
                         </Col>
                     </Row>
                 </Container>
-                <img className='bg' src='imgs/bg/gift-box.png' alt='Подбор подарка'/>
+                <img className="bg" src="imgs/bg/gift-box.png" alt="Подбор подарка" />
             </section>
 
             <Container>
-                <section className='mb-8'>
-                    <div className='d-flex justify-content-between align-items-center mb-4 mb-lg-5'>
-                        <h2 className='mb-0'>Новости</h2>
-                        <Link to="/" className='fw-6 d-flex align-items-center'>
+                <section className="mb-8">
+                    <div className="d-flex justify-content-between align-items-center mb-4 mb-lg-5">
+                        <h2 className="mb-0">Новости</h2>
+                        <Link to="/" className="fw-6 d-flex align-items-center">
                             <span>Смотреть&nbsp;все</span>
-                            <BiChevronRight className='fs-12'/>
+                            <BiChevronRight className="fs-12" />
                         </Link>
                     </div>
-                    <div className='position-relative'>
+                    <div className="position-relative">
                         <Swiper
-                            className='swiper-articles position-static py-xxl-5 mt-lg-5'
+                            className="swiper-articles position-static py-xxl-5 mt-lg-5"
                             modules={[Navigation, FreeMode]}
                             spaceBetween={16}
                             slidesPerView={'auto'}
@@ -284,7 +353,7 @@ function Home() {
                             breakpoints={{
                                 576: {
                                     slidesPerView: 2,
-                                    spaceBetween: 16
+                                    spaceBetween: 16,
                                 },
                                 768: {
                                     slidesPerView: 3,
@@ -305,86 +374,140 @@ function Home() {
                             }}
                         >
                             <SwiperSlide>
-                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                                <ArticlePreview
+                                    link={'/'}
+                                    title={'10 крутых подарков своими руками'}
+                                    imgUrl={'imgs/categories/cat2.jpg'}
+                                />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                                <ArticlePreview
+                                    link={'/'}
+                                    title={'10 крутых подарков своими руками'}
+                                    imgUrl={'imgs/categories/cat2.jpg'}
+                                />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                                <ArticlePreview
+                                    link={'/'}
+                                    title={'10 крутых подарков своими руками'}
+                                    imgUrl={'imgs/categories/cat2.jpg'}
+                                />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                                <ArticlePreview
+                                    link={'/'}
+                                    title={'10 крутых подарков своими руками'}
+                                    imgUrl={'imgs/categories/cat2.jpg'}
+                                />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                                <ArticlePreview
+                                    link={'/'}
+                                    title={'10 крутых подарков своими руками'}
+                                    imgUrl={'imgs/categories/cat2.jpg'}
+                                />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                                <ArticlePreview
+                                    link={'/'}
+                                    title={'10 крутых подарков своими руками'}
+                                    imgUrl={'imgs/categories/cat2.jpg'}
+                                />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ArticlePreview link={'/'} title={'10 крутых подарков своими руками'} imgUrl={'imgs/categories/cat2.jpg'}/>
+                                <ArticlePreview
+                                    link={'/'}
+                                    title={'10 крутых подарков своими руками'}
+                                    imgUrl={'imgs/categories/cat2.jpg'}
+                                />
                             </SwiperSlide>
                         </Swiper>
                     </div>
                 </section>
             </Container>
 
-            <section className='d-none d-md-block balloons'>
-                <img src='imgs/bg/bg-balloons.png' alt='шары' className='bg'/>
+            <section className="d-none d-md-block balloons">
+                <img src="imgs/bg/bg-balloons.png" alt="шары" className="bg" />
                 <Container>
                     <Row>
                         <Col xs={12} lg={7} xxl={6}>
-                            <h2>Хотите сделать праздник<br/>по-настоящему ярким?</h2>
-                            <p className='fs-12 fw-3'>Скорее заказывайте воздушные шары, они обязательно понравятся как взрослым, так и малышам. Доставим в любую точку Казани!</p>
-                            <form className='mt-4 mb-5'>
-                                <Row className='g-3'>
+                            <h2>
+                                Хотите сделать праздник
+                                <br />
+                                по-настоящему ярким?
+                            </h2>
+                            <p className="fs-12 fw-3">
+                                Скорее заказывайте воздушные шары, они обязательно понравятся как взрослым, так и
+                                малышам. Доставим в любую точку Казани!
+                            </p>
+                            <form className="mt-4 mb-5">
+                                <Row className="g-3">
                                     <Col md={4}>
-                                        <label className='mb-2'>Телефон</label>
-                                        <input type='tel' placeholder='+7 (965) 345-67-89'/>
+                                        <label className="mb-2">Телефон</label>
+                                        <input type="tel" placeholder="+7 (965) 345-67-89" />
                                     </Col>
                                     <Col md={4}>
-                                        <label className='mb-2'>Имя</label>
-                                        <input type='text' placeholder='Ваше имя'/>
+                                        <label className="mb-2">Имя</label>
+                                        <input type="text" placeholder="Ваше имя" />
                                     </Col>
                                     <Col md={4}>
-                                        <label className='mb-2'>Дата</label>
-                                        <input type='date'/>
+                                        <label className="mb-2">Дата</label>
+                                        <input type="date" />
                                     </Col>
                                     <Col xs={12}>
-                                        <label className='mb-2'>Комментарий к заказу</label>
-                                        <textarea placeholder='Ваше имя'></textarea>
+                                        <label className="mb-2">Комментарий к заказу</label>
+                                        <textarea placeholder="Ваше имя"></textarea>
                                     </Col>
-                                    <Col xs={12} className='d-flex align-items-center'>
-                                        <button type='submit' className='btn-1'>Оформить заказ</button>
-                                        <div className='flex-1 fs-08 fw-3 ms-3'>Нажимая на кнопку «Оформить заказ», вы соглашаетесь с <a href='/' className='main-color text-decoration-underline'>политикой конфидециальности</a></div>
+                                    <Col xs={12} className="d-flex align-items-center">
+                                        <button type="submit" className="btn-1">
+                                            Оформить заказ
+                                        </button>
+                                        <div className="flex-1 fs-08 fw-3 ms-3">
+                                            Нажимая на кнопку «Оформить заказ», вы соглашаетесь с{' '}
+                                            <a href="/" className="main-color text-decoration-underline">
+                                                политикой конфидециальности
+                                            </a>
+                                        </div>
                                     </Col>
                                 </Row>
                             </form>
 
-                            <div className='d-none d-xl-block position-relative'>
-                                <Link to="/balloons" className='fw-6'>
+                            <div className="d-none d-xl-block position-relative">
+                                <Link to="/balloons" className="fw-6">
                                     <span>Смотреть все</span>
-                                    <BiChevronRight className='fs-12'/>
+                                    <BiChevronRight className="fs-12" />
                                 </Link>
                                 <Swiper
-                                    className='position-static py-3'
+                                    className="position-static py-3"
                                     modules={[Navigation]}
                                     spaceBetween={30}
                                     slidesPerView={3}
                                     navigation={true}
                                 >
                                     <SwiperSlide>
-                                        <SubCategoryCard title={'Шары ко дню рождения'} imgUrl={'imgs/product2.jpg'}/>
+                                        <SubCategoryCard
+                                            title={'Шары ко дню рождения'}
+                                            imgUrl={'imgs/product2.jpg'}
+                                        />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <SubCategoryCard title={'Шары в виде животных'} imgUrl={'imgs/product2.jpg'}/>
+                                        <SubCategoryCard
+                                            title={'Шары в виде животных'}
+                                            imgUrl={'imgs/product2.jpg'}
+                                        />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <SubCategoryCard title={'Шары ко дню рождения'} imgUrl={'imgs/product2.jpg'}/>
+                                        <SubCategoryCard
+                                            title={'Шары ко дню рождения'}
+                                            imgUrl={'imgs/product2.jpg'}
+                                        />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <SubCategoryCard title={'Шары в виде животных'} imgUrl={'imgs/product2.jpg'}/>
+                                        <SubCategoryCard
+                                            title={'Шары в виде животных'}
+                                            imgUrl={'imgs/product2.jpg'}
+                                        />
                                     </SwiperSlide>
                                 </Swiper>
                             </div>
@@ -393,7 +516,7 @@ function Home() {
                 </Container>
             </section>
         </main>
-    );
+    )
 }
 
-export default Home;
+export default Home

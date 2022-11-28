@@ -6,19 +6,18 @@ import Breadcrumbs from '../components/utils/Breadcrumbs'
 import CategoryCard from '../components/CategoryCard'
 import PopularProductsSlider from '../components/PopularProductsSlider'
 
-
 export default function Catalog(props) {
     return (
         <main>
             <Container>
-                <Breadcrumbs/>
+                <Breadcrumbs />
 
-                <section className='mb-8'>
+                <section className="mb-8">
                     <h1>Каталог</h1>
 
-                    <aside className='d-none d-lg-block horizontal mb-5'></aside>
+                    <aside className="d-none d-lg-block horizontal mb-5"></aside>
 
-                    <Row xs={2} md={3} lg={4} className='gy-4 gy-lg-5 gx-2 gx-sm-3'>
+                    <Row xs={2} md={3} lg={4} className="gy-4 gy-lg-5 gx-2 gx-sm-3">
                         <Col>
                             <CategoryCard title={'Наборы'} imgUrl={'imgs/categories/cat1.jpg'} />
                         </Col>
@@ -46,8 +45,8 @@ export default function Catalog(props) {
                     </Row>
                 </section>
 
-                <PopularProductsSlider/>
+                <PopularProductsSlider />
             </Container>
         </main>
-    );
+    )
 }
