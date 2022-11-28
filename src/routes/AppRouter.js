@@ -1,7 +1,6 @@
 import React from 'react'
-import {useRoutes, useLocation} from 'react-router-dom'
-import {useLayoutEffect} from 'react'
-import Layout from '../components/Layout'
+import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
+import AppLayout from '../layouts/AppLayout'
 import Home from '../pages/Home'
 import Balloons from '../pages/Balloons'
 import Delivery from '../pages/Delivery'
@@ -25,45 +24,35 @@ import AllOffers from '../pages/AllOffers'
 import Offer from '../pages/Offer'
 import NotFound from '../pages/NotFound'
 
-export const routeList = [
-    {
-        path: '/',
-        element: <Layout />,
-        children: [
-            {index: true, element: <Home />, breadcrumb: 'Главная'},
-            {path: 'about', element: <About />, breadcrumb: 'О компании'},
-            {path: 'delivery', element: <Delivery />, breadcrumb: 'Доставка и оплата'},
-            {path: 'returns', element: <Returns />, breadcrumb: 'Возврат'},
-            {path: 'contacts', element: <Contacts />, breadcrumb: 'Контакты'},
-            {path: 'offers', element: <AllOffers />, breadcrumb: 'Акции'},
-            {path: 'offers/offer', element: <Offer />, breadcrumb: 'Название акции'},
-            {path: 'all-news', element: <AllNews />, breadcrumb: 'Новости'},
-            {path: 'all-news/news', element: <News />, breadcrumb: 'Название новости'},
-            {path: 'favorites', element: <Favorites />, breadcrumb: 'Избранное'},
-            {path: 'catalog', element: <Catalog />, breadcrumb: 'Каталог'},
-            {path: 'catalog/category', element: <Category />, breadcrumb: 'Категория'},
-            {path: 'catalog/category/list', element: <ProductList />, breadcrumb: 'Список товаров'},
-            {path: 'catalog/category/list/product', element: <Product />, breadcrumb: 'Товар'},
-            {path: 'balloons', element: <Balloons />, breadcrumb: 'Шары'},
-            {path: 'cart', element: <ShoppingCart />, breadcrumb: 'Корзина'},
-            {path: 'cart/checkout', element: <Checkout />, breadcrumb: 'Оформление заказа'},
-            {path: 'registration', element: <Registration />, breadcrumb: 'Регистрация'},
-            {path: 'login', element: <Login />, breadcrumb: 'Вход в личный кабинет'},
-            {path: 'reset-password', element: <ResetPassword />, breadcrumb: 'Восстановление пароля'},
-            {path: 'account/*', element: <Account />, breadcrumb: 'Личный аккаунт'},
-            {path: '*', element: <NotFound />, breadcrumb: 'Страница не найдена 404'},
-        ],
-    },
-]
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path="/" element={<AppLayout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="delivery" element={<Delivery />} />
+            <Route path="returns" element={<Returns />} />
+            <Route path="contacts" element={<Contacts />} />
+            <Route path="offers" element={<AllOffers />} />
+            <Route path="offers/offer" element={<Offer />} />
+            <Route path="all-news" element={<AllNews />} />
+            <Route path="all-news/news" element={<News />} />
+            <Route path="favorites" element={<Favorites />} />
+            <Route path="catalog" element={<Catalog />} />
+            <Route path="catalog/category" element={<Category />} />
+            <Route path="catalog/category/list" element={<ProductList />} />
+            <Route path="catalog/category/list/product" element={<Product />} />
+            <Route path="balloons" element={<Balloons />} />
+            <Route path="cart" element={<ShoppingCart />} />
+            <Route path="cart/checkout" element={<Checkout />} />
+            <Route path="registration" element={<Registration />} />
+            <Route path="login" element={<Login />} />
+            <Route path="reset-password" element={<ResetPassword />} />
+            <Route path="account/*" element={<Account />} />
+            <Route path="*" element={<NotFound />} />
+        </Route>
+    )
+)
 
-export default function AppRouter() {
-    const Wrapper = ({children}) => {
-        const {pathname} = useLocation()
-        useLayoutEffect(() => document.documentElement.scrollTo(0, 0), [pathname])
-        return children
-    }
+const AppRouter = () => <RouterProvider router={router} />
 
-    const element = useRoutes(routeList)
-
-    return <Wrapper>{element}</Wrapper>
-}
+export default AppRouter

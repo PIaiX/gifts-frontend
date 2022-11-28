@@ -1,7 +1,6 @@
 import React from 'react'
 import {Route, Routes, Navigate} from 'react-router-dom'
 import AccountLayout from '../pages/account/AccountLayout'
-
 import AccountMenu from '../pages/account/AccountMenu'
 import AddAddress from '../pages/account/AddAddress'
 import Addresses from '../pages/account/Addresses'
