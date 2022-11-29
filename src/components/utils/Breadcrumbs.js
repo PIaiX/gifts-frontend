@@ -1,18 +1,20 @@
-import useBreadcrumbs from 'use-react-router-breadcrumbs'
-import {routeList} from '../../routes/AppRouter'
-import {Link} from 'react-router-dom'
+import {useMatches} from 'react-router-dom'
 
-export default function Breadcrumbs() {
-    const breadcrumbs = useBreadcrumbs(routeList)
+const Breadcrumbs = () => {
+    let matches = useMatches()
+    let crumbs = matches
+        .filter((match) => Boolean(match.handle?.crumb))
+        .map((match) => match.handle.crumb(match.data))
+
     return (
         <nav className="breadcrumbs">
             <ul>
-                {breadcrumbs.map(({match, breadcrumb}) => (
-                    <li key={match.pathname}>
-                        <Link to={match.pathname}>{breadcrumb}</Link>
-                    </li>
+                {crumbs.map((crumb, index) => (
+                    <li key={index}>{crumb}</li>
                 ))}
             </ul>
         </nav>
     )
 }
+
+export default Breadcrumbs

@@ -1,5 +1,5 @@
 import React from 'react'
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, createRoutesFromElements, Link, Route, RouterProvider} from 'react-router-dom'
 import AppLayout from '../layouts/AppLayout'
 import Home from '../pages/Home'
 import Balloons from '../pages/Balloons'
@@ -26,29 +26,89 @@ import NotFound from '../pages/NotFound'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<AppLayout />}>
+        <Route path="/" element={<AppLayout />} handle={{crumb: () => <Link to="/">Главная</Link>}}>
             <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="delivery" element={<Delivery />} />
-            <Route path="returns" element={<Returns />} />
-            <Route path="contacts" element={<Contacts />} />
-            <Route path="offers" element={<AllOffers />} />
-            <Route path="offers/offer" element={<Offer />} />
-            <Route path="all-news" element={<AllNews />} />
-            <Route path="all-news/news" element={<News />} />
-            <Route path="favorites" element={<Favorites />} />
-            <Route path="catalog" element={<Catalog />} />
-            <Route path="catalog/category" element={<Category />} />
-            <Route path="catalog/category/list" element={<ProductList />} />
-            <Route path="catalog/category/list/product" element={<Product />} />
-            <Route path="balloons" element={<Balloons />} />
-            <Route path="cart" element={<ShoppingCart />} />
-            <Route path="cart/checkout" element={<Checkout />} />
-            <Route path="registration" element={<Registration />} />
-            <Route path="login" element={<Login />} />
-            <Route path="reset-password" element={<ResetPassword />} />
-            <Route path="account/*" element={<Account />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="about" element={<About />} handle={{crumb: () => <Link to="/about">О компании</Link>}} />
+            <Route
+                path="delivery"
+                element={<Delivery />}
+                handle={{crumb: () => <Link to="/delivery">Доставка и оплата</Link>}}
+            />
+            <Route path="returns" element={<Returns />} handle={{crumb: () => <Link to="/returns">Возврат</Link>}} />
+            <Route
+                path="contacts"
+                element={<Contacts />}
+                handle={{crumb: () => <Link to="/contacts">Контакты</Link>}}
+            />
+            <Route path="offers" element={<AllOffers />} handle={{crumb: () => <Link to="/offers">Акции</Link>}} />
+            <Route
+                path="offers/offer"
+                element={<Offer />}
+                handle={{crumb: () => <Link to="/offers/offer">Название акции</Link>}}
+            />
+            <Route
+                path="all-news"
+                element={<AllNews />}
+                handle={{crumb: () => <Link to="/all-news">Новости</Link>}}
+            />
+            <Route
+                path="all-news/news"
+                element={<News />}
+                handle={{crumb: () => <Link to="/all-news/news">Название новости</Link>}}
+            />
+            <Route
+                path="favorites"
+                element={<Favorites />}
+                handle={{crumb: () => <Link to="/favorites">Избранное</Link>}}
+            />
+            <Route path="catalog" element={<Catalog />} handle={{crumb: () => <Link to="/catalog">Каталог</Link>}} />
+            <Route
+                path="catalog/category"
+                element={<Category />}
+                handle={{crumb: () => <Link to="/catalog/category">Категория</Link>}}
+            />
+            <Route
+                path="catalog/category/list"
+                element={<ProductList />}
+                handle={{crumb: () => <Link to="/catalog/category/list">Список товаров</Link>}}
+            />
+            <Route
+                path="catalog/category/list/product"
+                element={<Product />}
+                handle={{crumb: () => <Link to="/catalog/category/list/product">Товар</Link>}}
+            />
+            <Route path="balloons" element={<Balloons />} handle={{crumb: () => <Link to="/balloons">Шары</Link>}} />
+            <Route path="cart" element={<ShoppingCart />} handle={{crumb: () => <Link to="/cart">Корзина</Link>}} />
+            <Route
+                path="cart/checkout"
+                element={<Checkout />}
+                handle={{crumb: () => <Link to="/cart/checkout">Оформление заказа</Link>}}
+            />
+            <Route
+                path="registration"
+                element={<Registration />}
+                handle={{crumb: () => <Link to="/registration">Регистрация</Link>}}
+            />
+            <Route
+                path="login"
+                element={<Login />}
+                handle={{crumb: () => <Link to="/login">Вход в личный кабинет</Link>}}
+            />
+            <Route
+                path="reset-password"
+                element={<ResetPassword />}
+                handle={{crumb: () => <Link to="/reset-password">Восстановление пароля</Link>}}
+            />
+            <Route
+                path="account/*"
+                element={<Account />}
+                handle={{crumb: () => <Link to="/account">Личный аккаунт</Link>}}
+            />
+            <Route
+                path="*"
+                element={<NotFound />}
+                handle={{crumb: () => <Link to="*">Страница не найдена 404</Link>}}
+            />
         </Route>
     )
 )

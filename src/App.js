@@ -1,12 +1,8 @@
 import React from 'react'
-import {HashRouter} from 'react-router-dom'
 import AppRouter from './routes/AppRouter'
 
-function App() {
-    return (
-        <HashRouter>
-            <AppRouter />
-        </HashRouter>
-    )
+const App = () => {
+    return <AppRouter />
 }
+
 export default App
